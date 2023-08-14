@@ -1,8 +1,12 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
+from django.views import generic
+from .models import Carousel, OverviewCard
 
 
 def home(request):
-    return render(request, 'home.html', {})
+    carousel_objects = Carousel.objects.all
+    context = {'carousel_objects': carousel_objects}
+    return render(request, 'home.html', context)
 
 
 def people(request):

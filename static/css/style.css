@@ -33,7 +33,7 @@ a {
 
 h1 {
     font-family: Montserrat, sans-serif;
-    font-size: 24px;
+    font-size: 18px;
     text-transform: uppercase;
 }
 
@@ -48,6 +48,15 @@ p {
 
 /* Carousel styles */
 .hero-tagline {
-    background-color: rgba(242, 252, 245, 0.8);
+    background-color: #648A8B;
+    color: white;
     padding-left: 10px;
+}
+
+
+/* Media queries */
+@media (min-width: 1400px) {
+    h1 {
+        font-size: 24px;
+    }
 }

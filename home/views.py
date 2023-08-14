@@ -5,7 +5,8 @@ from .models import Carousel, OverviewCard
 
 def home(request):
     carousel_objects = Carousel.objects.all
-    context = {'carousel_objects': carousel_objects}
+    overview_card_objects = OverviewCard.objects.all
+    context = {'carousel_objects': carousel_objects, 'overview_card_objects': overview_card_objects}
     return render(request, 'home.html', context)
 
 

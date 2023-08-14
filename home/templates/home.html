@@ -35,33 +35,60 @@
             </div>
         </section>
 
-        <!-- Principles -->
+        <!-- Objectives -->
         <section>
             <div class="text-center">
-                <h1 class="my-2"><strong>Core Principles</strong></h1>
+                <h1 class="my-2"><strong>Core Objectives</strong></h1>
                 <div class="row justify-content-center mt-4 pt-3">
                     <div class="col-12 col-sm-3 text-center">
-                        <i class="fa-duotone fa-people-group principles-icon pb-1"></i>
+                        <i class="fa-duotone fa-people-group objectives-icon pb-1"></i>
                         <h2>ENGAGING</h2>
                         <p>strategic actors and communicators to improve media practice</p>
                     </div>
                     <div class="col-12 col-sm-3 mx-2">
-                        <i class="fa-duotone fa-file-chart-pie principles-icon pb-1"></i>
+                        <i class="fa-duotone fa-file-chart-pie objectives-icon pb-1"></i>
                         <h2>EVALUATING</h2>
                         <p>strategic communications by a range of diverse actors</p>
                     </div>
                     <div class="col-12 col-sm-3">
-                        <i class="fa-duotone fa-head-side-brain principles-icon pb-1"></i>
+                        <i class="fa-duotone fa-head-side-brain objectives-icon pb-1"></i>
                         <h2>UNDERSTANDING</h2>
                         <p>the digital media ecosystem around climate change</p>
                     </div>
                 </div>
             </div>
-            <div class="principles-bkgrd">
+            <div>
                 <img class="screen-break" src="https://res.cloudinary.com/ddqyimddv/image/upload/v1692027288/wave_fzr1gk_1_-cropped_qmorjm.svg" alt="">
             </div>
         </section>
-    
+
+        <!-- Overview -->
+        <section class="container-fluid">
+            <div class="text-center">
+                <h1 class="my-3"><strong>What we do</strong></h1>
+                <p>Combining state-of-the-art data science, AI, and social science methods to empower the environmental movement.</p>
+                <p>The Centre for Climate Communication and Data Science (C3DS) is an interdisciplinary research centre commited to improving strategic communications to deliver meaningful action on climate change.</p>
+            </div>
+            <div class="col-12">
+                <div class="row row-cols-sm-3">
+                    {% for item in overview_card_objects %}
+                        <div class="card-body">
+                            <a href="#" class="">
+                                <div class=" d-flex text-left">
+                                    <h2 class="">{{ item.title }}</h2>
+                                </div>
+                                <div>
+                                    <img src="{{ item.card_image.url }}" alt="">
+                                </div>
+                                <div class=" d-flex text-left">
+                                    <p>{{ item.summary }}</p>
+                                </div>
+                            </a>
+                        </div>
+                    {% endfor %}
+                </div>  
+            </div>
+        </section>                
     </div>
     
 

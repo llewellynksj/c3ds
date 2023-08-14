@@ -45,3 +45,9 @@ h2 {
 p {
     font-size: 18px;
 }
+
+/* Carousel styles */
+.hero-tagline {
+    background-color: rgba(242, 252, 245, 0.8);
+    padding-left: 10px;
+}

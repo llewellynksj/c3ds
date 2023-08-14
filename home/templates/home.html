@@ -7,11 +7,19 @@
             <div id="carouselExample" class="carousel slide">
                 <div class="carousel-inner">
                     {% for item in carousel_objects %}
-                        <div class="carousel-item active">
-                            <img src="{{ item.hero_image.url }}"
-                                class="d-block w-100" alt="...">
-                            <h3>{{ item.tagline_text }}</h3>
-                        </div>
+                        {% if forloop.first %}
+                            <div class="carousel-item active">
+                                <img src="{{ item.hero_image.url }}"
+                                    class="d-block w-100" alt="...">
+                                <h3 class="hero-tagline">{{ item.tagline_text }}</h3>
+                            </div>
+                        {% else %}
+                            <div class="carousel-item">
+                                <img src="{{ item.hero_image.url }}"
+                                    class="d-block w-100" alt="...">
+                                <h3 class="hero-tagline">{{ item.tagline_text }}</h3>
+                            </div>
+                        {% endif %}
                     {% endfor %}
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">

@@ -2,7 +2,7 @@
 
 {% block content %}
 
-    <div class="body-content">
+    <div class="">
         
         <!-- Carousel -->
         <section>
@@ -36,23 +36,27 @@
         </section>
 
         <!-- Overview -->
-        <section class="container-fluid">
-            <div class="text-center">
+        <section class="container-fluid body-content">
+            <div class="text-left">
                 <h1 class="my-3"><strong>What we do</strong></h1>
                 <p>Combining state-of-the-art data science, AI, and social science methods to empower the environmental movement.</p>
                 <p>The Centre for Climate Communication and Data Science (C3DS) is an interdisciplinary research centre commited to improving strategic communications to deliver meaningful action on climate change.</p>
             </div>
             <!-- <div class=""> -->
-                <div class="row row-cols-sm-2 card-container">
+                <div class="row card-container">
                     {% for item in overview_card_objects %}
-                        <div class="card-body col">
+                        <div class="card-body col-12 col-sm-6">
                             <a href="#" class="">
                                 <h2 class="card-title">{{ item.title }}</h2>
                                 <img src="{{ item.card_image.url }}" alt="">
                                 <p>{{ item.summary }}</p>
                             </a>
                         </div>
+                        {% if forloop.counter|divisibleby:2 %}
+                            <div class="row">
+                        {% endif %}
                     {% endfor %}
+                            </div>
                 </div>  
             <!-- </div> -->
         </section>   

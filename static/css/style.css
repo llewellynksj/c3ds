@@ -1,13 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@200;300&family=Montserrat:ital,wght@0,200;0,300;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@200;300&family=Montserrat:ital,wght@0,200;0,300;0,500;1,300&display=swap');
 
 body {
     font-family: Barlow , sans-serif;
     color: black;
-}
-
-.body-content, .navbar {
-    /* max-width: 1400px; */
-    margin: auto;
 }
 
 .navbar, footer {
@@ -65,10 +60,14 @@ p {
 }
 
 /* Overview */
-.card-container {
-    margin: auto;
+.body-content {
     max-width: 1400px;
 }
+/* .card-container {
+    margin: auto;
+    max-width: 800px;
+    overflow: hidden;
+} */
 
 .card-title {
     text-align: left;

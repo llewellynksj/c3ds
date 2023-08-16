@@ -47,9 +47,9 @@
                     {% for item in overview_card_objects %}
                         <div class="card-body col-12 col-sm-6">
                             <a href="#" class="">
-                                <h2 class="card-title">{{ item.title }}</h2>
+                                <h2 class="card-title pl-3">{{ item.title }}</h2>
                                 <img src="{{ item.card_image.url }}" alt="">
-                                <p>{{ item.summary }}</p>
+                                <p class="pt-2 pl-2">{{ item.summary }}</p>
                             </a>
                         </div>
                         {% if forloop.counter|divisibleby:2 %}
@@ -63,28 +63,28 @@
 
         <!-- Objectives -->
         <section>
-            <div class="text-center">
-                <h1 class="my-2"><strong>Core Objectives</strong></h1>
+            <div>
+                <img class="screen-break" src="https://res.cloudinary.com/ddqyimddv/image/upload/v1692027288/wave_fzr1gk_1_-cropped_qmorjm.svg" alt="">
+            </div>
+            <div class="container-fluid body-content">
+                <h1 class="my-3 text-left"><strong>Core Objectives</strong></h1>
                 <div class="row justify-content-center mt-4 pt-3">
                     <div class="col-12 col-sm-3 text-center">
                         <i class="fa-duotone fa-people-group objectives-icon pb-1"></i>
                         <h2>ENGAGING</h2>
                         <p>strategic actors and communicators to improve media practice</p>
                     </div>
-                    <div class="col-12 col-sm-3 mx-2">
+                    <div class="col-12 col-sm-3 mx-2 text-center">
                         <i class="fa-duotone fa-file-chart-pie objectives-icon pb-1"></i>
                         <h2>EVALUATING</h2>
                         <p>strategic communications by a range of diverse actors</p>
                     </div>
-                    <div class="col-12 col-sm-3">
+                    <div class="col-12 col-sm-3 text-center">
                         <i class="fa-duotone fa-head-side-brain objectives-icon pb-1"></i>
                         <h2>UNDERSTANDING</h2>
                         <p>the digital media ecosystem around climate change</p>
                     </div>
                 </div>
-            </div>
-            <div>
-                <img class="screen-break" src="https://res.cloudinary.com/ddqyimddv/image/upload/v1692027288/wave_fzr1gk_1_-cropped_qmorjm.svg" alt="">
             </div>
         </section>
 

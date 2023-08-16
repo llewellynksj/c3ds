@@ -45,10 +45,27 @@ p {
     font-weight: 300;
 }
 
-.screen-break {
+.screen-break-top {
     opacity: 0.8;
     -webkit-transform: scaleY(-1);
     transform: scaleY(-1);
+}
+
+.screen-break-bottom {
+    opacity: 0.9;
+}
+
+/* Footer */
+.social-media-links {
+    margin: 0 5px;
+}
+
+.social-media-links i {
+    font-size: 22px;
+}
+
+.footer-text {
+    font-size: 14px;
 }
 
 /* Carousel styles */
@@ -76,7 +93,7 @@ p {
 }
 
 .card-body {
-    max-width: 400px;
+    max-width: 320px;
     padding: 5px;
     border-radius: 15px;
     margin: auto;
@@ -89,6 +106,10 @@ p {
 /* Objectives */
 .objectives-icon {
     font-size: 28px;
+}
+
+.key-aims {
+    max-width: 250px;
 }
 
 /* Media queries */

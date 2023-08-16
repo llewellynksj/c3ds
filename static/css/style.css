@@ -5,10 +5,6 @@ body {
     color: black;
 }
 
-/* .navbar, footer {
-    background-color: #F2FCF5;
-} */
-
 i {
     color: #648A8B;
     font-size: 18px;
@@ -35,12 +31,18 @@ h1 {
 }
 
 h2 {
-    font-size: 20px;
+    font-family: Montserrat, sans-serif;
+    font-size: 18px;
 }
 
 p {
-    font-size: 18px;
+    font-size: 16px;
 }
+
+.link-colour {
+    color: blue;
+}
+
 .page-title {
     font-weight: 300;
 }
@@ -52,7 +54,7 @@ p {
 }
 
 .screen-break-bottom {
-    opacity: 0.9;
+    opacity: 0.5;
 }
 
 /* Footer */
@@ -73,7 +75,8 @@ p {
     background-color: #648A8B;
     color: white;
     padding-left: 10px;
-    height: 30px;
+    height: 40px;
+    align-self: center;
 }
 
 /* Overview */
@@ -110,6 +113,11 @@ p {
 
 .key-aims {
     max-width: 250px;
+}
+
+/* Twitter */
+.twitter-container {
+    max-height: 800px;
 }
 
 /* Media queries */

@@ -73,15 +73,26 @@ p {
 /* Carousel styles */
 .hero-tagline {
     background-color: #648A8B;
+    font-size: 22px;
     color: white;
     padding-left: 10px;
+    padding-top: 5px;
     height: 40px;
     align-self: center;
+}
+
+.overflow {
+    overflow: hidden;
 }
 
 /* Overview */
 .body-content {
     max-width: 1400px;
+    margin: auto;
+}
+
+.overview-subtext {
+    max-width: 1200px;
     margin: auto;
 }
 
@@ -96,14 +107,15 @@ p {
 }
 
 .card-body {
-    max-width: 320px;
+    max-width: 400px;
     padding: 5px;
     border-radius: 15px;
     margin: auto;
 }
 
-.card-body img {
+.card-img {
     border-radius: 15px;
+    width:;
 }
 
 /* Objectives */
@@ -115,12 +127,29 @@ p {
     max-width: 250px;
 }
 
-/* Twitter */
-.twitter-container {
-    max-height: 800px;
+.section-header {
+    text-decoration: underline;
+}
+
+/* Contact section on homepage */
+.contact-section {
+    background-color: #D2DEDF;
+    box-shadow:  7px 7px 17px #b9c3c4,
+                -7px -7px 17px #ebf9fa;
 }
 
 /* Media queries */
+@media (min-width: 992px) {
+    .card-body {
+        max-width: 500px;
+    }
+    .hero-tagline {
+        font-size: 26px;
+        padding-top: 8px;
+        height: 60px;
+    }
+} 
+
 @media (min-width: 1400px) {
     .page-title {
         font-size: 24px;

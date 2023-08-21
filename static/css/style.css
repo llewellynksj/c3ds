@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@200;300&family=Montserrat:ital,wght@0,200;0,300;0,500;1,300&display=swap');
 
+/* Base styles */
 body {
     font-family: Barlow , sans-serif;
     color: black;
@@ -47,27 +48,18 @@ p {
     font-weight: 300;
 }
 
+.overflow {
+    overflow: hidden;
+}
+
 .screen-break-top {
-    opacity: 0.8;
+    opacity: 0.5;
     -webkit-transform: scaleY(-1);
     transform: scaleY(-1);
 }
 
 .screen-break-bottom {
-    opacity: 0.5;
-}
-
-/* Footer */
-.social-media-links {
-    margin: 0 5px;
-}
-
-.social-media-links i {
-    font-size: 22px;
-}
-
-.footer-text {
-    font-size: 14px;
+    opacity: 0.8;
 }
 
 /* Carousel styles */
@@ -81,19 +73,19 @@ p {
     align-self: center;
 }
 
-.overflow {
-    overflow: hidden;
-}
-
 /* Overview */
 .body-content {
     max-width: 1400px;
     margin: auto;
 }
 
-.overview-subtext {
-    max-width: 1200px;
+.inner-section-container {
+    max-width: 1180px;
     margin: auto;
+}
+
+.subtext h2 {
+    font-weight: 350;
 }
 
 .card-container {
@@ -115,10 +107,16 @@ p {
 
 .card-img {
     border-radius: 15px;
-    width:;
 }
 
 /* Objectives */
+/* .bkgrd-img {
+    background-image: url('https://res.cloudinary.com/ddqyimddv/image/upload/v1692610132/bkground_jd70wu-o_30_y36uhw.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+} */
+
 .objectives-icon {
     font-size: 28px;
 }
@@ -136,6 +134,19 @@ p {
     background-color: #D2DEDF;
     box-shadow:  7px 7px 17px #b9c3c4,
                 -7px -7px 17px #ebf9fa;
+}
+
+/* Footer */
+.social-media-links {
+    margin: 0 5px;
+}
+
+.social-media-links i {
+    font-size: 22px;
+}
+
+.footer-text {
+    font-size: 14px;
 }
 
 /* Media queries */

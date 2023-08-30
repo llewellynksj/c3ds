@@ -109,14 +109,6 @@ p {
     border-radius: 15px;
 }
 
-/* Objectives */
-/* .bkgrd-img {
-    background-image: url('https://res.cloudinary.com/ddqyimddv/image/upload/v1692610132/bkground_jd70wu-o_30_y36uhw.webp');
-    background-repeat: no-repeat;
-    background-size: cover;
-    
-} */
-
 .objectives-icon {
     font-size: 28px;
 }
@@ -129,12 +121,27 @@ p {
     text-decoration: underline;
 }
 
+.section-title {
+    max-width: 900px;
+}
+
 /* Contact section on homepage */
 .contact-section {
     background-color: #D2DEDF;
     box-shadow:  7px 7px 17px #b9c3c4,
                 -7px -7px 17px #ebf9fa;
 }
+
+/* People Page */
+.profile-img {
+    max-width: 250px;
+}
+
+.profile-body {
+    max-width: 250px;
+    /* margin: 8px; */
+}
+
 
 /* Footer */
 .social-media-links {

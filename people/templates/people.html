@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="container-fluid">
+    <h1 class="my-3 text-center"><strong>People</strong></h1>
+    <div>
+        <h2 class="text-center">Centre Directors</h2>
+        <div>
+            <div class="row card-container pb-3 justify-content-center">
+                {% for item in profile_list %}
+                <div class="profile-body col col-md-12 m-4">
+                    <a href="https://politics.exeter.ac.uk/staff/coan/" class="">
+                        <h3 class="card-title">{{ item.name }}</h3>
+                        <img src="{{ item.profile_pic.url }}" alt="" class="profile-img">
+                        <h4 class="card-title">{{ item.job_title }}</h4>
+                        <p class="">{{ item.discipline }}</p>
+                        <p class="">{{ item.summary }}</p>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <h2 class="text-center">Research Fellows</h2>
+        <div>
+            <!-- <div class="row card-container pb-3 justify-content-center">
+                {% for item in profile_list %}
+                <div class="profile-body col col-md-12 m-4">
+                    <a href="https://politics.exeter.ac.uk/staff/coan/" class="">
+                        <h3 class="card-title">{{ item.name }}</h3>
+                        <img src="{{ item.profile_pic.url }}" alt="" class="profile-img">
+                        <h4 class="card-title">{{ item.job_title }}</h4>
+                        <p class="">{{ item.discipline }}</p>
+                        <p class="">{{ item.summary }}</p>
+                    </a>
+                </div>
+                {% endfor %}
+            </div> -->
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -9,15 +9,17 @@
         <div>
             <div class="row card-container pb-3 justify-content-center">
                 {% for item in profile_list %}
-                <div class="profile-body col col-md-12 m-4">
-                    <a href="https://politics.exeter.ac.uk/staff/coan/" class="">
-                        <h3 class="card-title">{{ item.name }}</h3>
-                        <img src="{{ item.profile_pic.url }}" alt="" class="profile-img">
-                        <h4 class="card-title">{{ item.job_title }}</h4>
-                        <p class="">{{ item.discipline }}</p>
-                        <p class="">{{ item.summary }}</p>
-                    </a>
-                </div>
+                    {% if item.job_category == 'Centre Director' %}
+                        <div class="profile-body col col-md-12 m-4">
+                            <a href="https://politics.exeter.ac.uk/staff/coan/" class="">
+                                <h3 class="card-title">{{ item.name }}</h3>
+                                <img src="{{ item.profile_pic.url }}" alt="" class="profile-img">
+                                <h4 class="card-title">{{ item.job_title }}</h4>
+                                <p class="">{{ item.discipline }}</p>
+                                <p class="">{{ item.summary }}</p>
+                            </a>
+                        </div>
+                    {% endif %}
                 {% endfor %}
             </div>
         </div>

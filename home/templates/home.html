@@ -32,84 +32,50 @@
         </div>
     </section>
 
+    <!-- Overview -->
     <div class="row" style="margin: auto">
-        <div class="col-md-9">
-
-            <div class="row">
-                <div class="col-md-12">                
-                    <!-- Overview -->
-                    <section class="container-fluid body-content">
-                        <div class="text-left inner-section-container">
-                            <h1 class="my-3"><strong>What we do</strong></h1>
-                            <div class="subtext">
-                                <h2>Combining state-of-the-art data science, AI, and social science methods to empower the environmental
-                                    movement.</h2>
-                                <h2>The Centre for Climate Communication and Data Science (C3DS) is an interdisciplinary research centre
-                                    commited to improving strategic communications to deliver meaningful action on climate change.</h2>
-                            </div>
+        <div class="col-lg-9">
+            <div class="col-md-12">
+                <section class="container-fluid body-content">
+                    <div class="text-left inner-section-container">
+                        <h1 class="my-3"><strong>What we do</strong></h1>
+                        <div class="subtext">
+                            <h2>Combining state-of-the-art data science, AI, and social science methods to empower the environmental movement.</h2>
+                            <h2>The Centre for Climate Communication and Data Science (C3DS) is an interdisciplinary research centre commited to improving strategic communications to deliver meaningful action on climate change.</h2>
                         </div>
-                        <div class="row card-container pb-3">
-                            {% for item in overview_card_objects %}
-                            <div class="card-body col-12 col-sm-6">
-                                <a href="#" class="">
-                                    <h2 class="card-title pl-3">{{ item.title }}</h2>
-                                    <img src="{{ item.card_image.url }}" alt="" class="card-img">
-                                    <p class="pt-2 pl-2">{{ item.summary }}</p>
-                                </a>
-                            </div>
-                            {% if forloop.counter|divisibleby:2 %}
-                            <div class="row">
-                                {% endif %}
-                                {% endfor %}
-                            </div>
+                    </div>
+                    <div class="row card-container pb-3">
+                        {% for item in overview_card_objects %}
+                        <div class="card-body col-12 col-sm-6">
+                            <a href="#" class="">
+                                <h2 class="card-title pl-3">{{ item.title }}</h2>
+                                <img src="{{ item.card_image.url }}" alt="" class="card-img">
+                                <p class="pt-2 pl-2">{{ item.summary }}</p>
+                            </a>
                         </div>
-                        <br>
-                    </section>
-                </div>
+                        {% if forloop.counter|divisibleby:2 %}
+                        <div class="row">
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <br>
+                </section>
             </div>
-
-            <!-- <div class="row">
-                <div class="col-md-12"> 
-                    Objectives
-                    <section class="overflow">
-                        <h1 class="my-4 text-center section-header pt-4"><strong>Core Objectives</strong></h1>
-                        <div class="row justify-content-center mt-4 pt-4">
-                            <div class="col-12 col-sm-3 text-center">
-                                <i class="fa-duotone fa-people-group objectives-icon pb-1"></i>
-                                <h2 class="pt-1">ENGAGING</h2>
-                                <p>strategic actors and communicators to improve media practice</p>
-                            </div>
-                            <div class="col-12 col-sm-3 mx-2 text-center">
-                                <i class="fa-duotone fa-file-chart-pie objectives-icon pb-1"></i>
-                                <h2 class="pt-1">EVALUATING</h2>
-                                <p>strategic communications by a range of diverse actors</p>
-                            </div>
-                            <div class="col-12 col-sm-3 text-center">
-                                <i class="fa-duotone fa-head-side-brain objectives-icon pb-1"></i>
-                                <h2 class="pt-1">UNDERSTANDING</h2>
-                                <p>the digital media ecosystem around climate change</p>
-                            </div>
-                        </div>
-                        <br><br>
-                        <div>
-                            <img class="screen-break-bottom"
-                                src="https://res.cloudinary.com/ddqyimddv/image/upload/v1692185905/newwave-cropped_ubfxhe.svg" alt="">
-                        </div>
-                    </section>
-                </div>
-            </div> -->
         </div>
 
-        <div class="col-md-3 twitter-container mb-3">
-            <!-- Twitter Feed -->
+        <!-- Twitter Feed -->
+        <div class="col-lg-3 twitter-container mb-3">
             <section class="bkgrd-img">
                 <div class="container-fluid body-content">
                     <div class="text-left pt-3">
                         <h1 class="my-3"><strong>Follow us on Social Media</strong></h1>
                     </div>
-                    <div class="">
+                    <div class="twitter-outer">
                         <!-- <a class="twitter-timeline" data-height="auto" data-width="400" href="https://twitter.com/ExeterQStep/lists/1701185933121319383?ref_src=twsrc%5Etfw">A Twitter List by ExeterQStep</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
-                        <a class="twitter-timeline" data-height="775" data-width="auto" href="https://twitter.com/SaffronJONeill?ref_src=twsrc%5Etfw">Tweets by SaffronJONeill</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        <a class="twitter-timeline twitter-inner" data-height="760" data-width="auto"
+                            href="https://twitter.com/SaffronJONeill?ref_src=twsrc%5Etfw">Tweets by SaffronJONeill</a>
+                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                     </div>
                 </div>
             </section>
@@ -153,8 +119,7 @@
                     touch!</p>
 
                 <h2><strong>Contact</strong></h2>
-                <p>Prof. Coan at <a href="mailto:t.coan@exeter.ac.uk" class="link-colour">t.coan@exeter.ac.uk</a> for
-                    more information or to set up a meeting</p>
+                <p>Prof. Coan at <a href="mailto:t.coan@exeter.ac.uk" class="link-colour">t.coan@exeter.ac.uk</a> for more information or to set up a meeting</p>
             </div>
         </div>
     </section>

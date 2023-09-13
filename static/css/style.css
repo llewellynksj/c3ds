@@ -107,6 +107,8 @@ p {
 
 .card-img {
     border-radius: 15px;
+    max-width: 300px;
+    max-height: auto;
 }
 
 .objectives-icon {
@@ -129,6 +131,8 @@ p {
 .twitter-container {
     overflow: hidden;
     max-width: 300px;
+    background-color: #B1C6C6;
+    border-radius: 18px;
 }
 
 /* Contact section on homepage */

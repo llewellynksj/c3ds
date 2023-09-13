@@ -125,6 +125,12 @@ p {
     max-width: 900px;
 }
 
+/* Twitter feed */
+.twitter-container {
+    overflow: hidden;
+    max-width: 300px;
+}
+
 /* Contact section on homepage */
 .contact-section {
     background-color: #D2DEDF;

@@ -24,7 +24,7 @@ a {
 h1 {
     font-family: Montserrat, sans-serif;
     font-size: 21px;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
 }
 
 .page-title {
@@ -130,8 +130,9 @@ p {
 /* Twitter feed */
 .twitter-container {
     max-width: 300px;
-    background-color: #D2DEDF;
-    border-radius: 18px;
+    background-color: #648A8B;
+    border-radius: 10px;
+    color: white;
 }
 
 .twitter-outer {

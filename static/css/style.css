@@ -154,6 +154,7 @@ p {
     background-color: rgba(100, 138, 139, 0.7);
     border-radius: 10px;
     color: white;
+    display: none;
 }
 
 .twitter-outer {
@@ -204,6 +205,12 @@ p {
 }
 
 /* Media queries */
+@media (min-width: 768px) {
+    .twitter-container {
+        display: block;
+    }
+} 
+
 @media (min-width: 992px) {
     .card-body {
         max-width: 500px;

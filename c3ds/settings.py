@@ -32,7 +32,12 @@ DEBUG = 'DEBUG' in os.environ
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ['8000-llewellynksj-c3ds-017gbn6qcnw.ws-eu104.gitpod.io', 'localhost', 'c3ds-99d00e8e992e.herokuapp.com']
+
+ALLOWED_HOSTS = [
+    '8000-llewellynksj-c3ds-017gbn6qcnw.ws-eu104.gitpod.io',
+    'localhost',
+    'c3ds-99d00e8e992e.herokuapp.com'
+]
 
 
 # Application definition

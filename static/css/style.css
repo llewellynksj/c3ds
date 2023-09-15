@@ -62,6 +62,13 @@ p {
     opacity: 0.8;
 }
 
+.section-bkgrd {
+    background: url('https://res.cloudinary.com/ddqyimddv/image/upload/e_gradient_fade:44,o_12/v1694782263/background_jsnuik.jpg');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: cover;
+}
+
 /* Carousel styles */
 .hero-tagline {
     background-color: #648A8B;
@@ -109,6 +116,24 @@ p {
     border-radius: 15px;
     max-width: 300px;
     max-height: auto;
+    margin: auto;
+}
+
+.graphic {
+    width: 400px;
+    height: auto;
+    margin-left: 30px;
+    padding-left: 30px;
+    padding-top: 10px;
+}
+
+.objective-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.objective-inner {
+    width: 400px;
 }
 
 .objectives-icon {
@@ -119,10 +144,6 @@ p {
     max-width: 250px;
 }
 
-.section-header {
-    text-decoration: underline;
-}
-
 .section-title {
     max-width: 900px;
 }
@@ -130,7 +151,7 @@ p {
 /* Twitter feed */
 .twitter-container {
     max-width: 300px;
-    background-color: #648A8B;
+    background-color: rgba(100, 138, 139, 0.7);
     border-radius: 10px;
     color: white;
 }
@@ -152,11 +173,11 @@ p {
 }
 
 /* Contact section on homepage */
-.contact-section {
+/* .contact-section {
     background-color: #D2DEDF;
     box-shadow:  7px 7px 17px #b9c3c4,
                 -7px -7px 17px #ebf9fa;
-}
+} */
 
 /* People Page */
 .profile-img {

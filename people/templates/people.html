@@ -7,24 +7,23 @@
     <div>
         <h2 class="text-center">Centre Directors</h2>
         <div>
-            <div class="row card-container pb-3 justify-content-center">
+            <div class="row card-container pb-3 d-flex justify-content-center profile-container">
                 {% for item in profile_list %}
                     {% if item.job_category == 'Centre Director' %}
-                        <div class="profile-body col col-md-12 m-4">
-                            <div class="row-cols-6">
-                                <a href="{{ item.web_link }}" target="_blank" rel="noopener" class="">
+                            <div class="col-md-4 d-flex justify-content-center align-items-top">
+                                <a href="{{ item.web_link }}" target="_blank" rel="noopener" class="profile-img-container">
                                     <img src="{{ item.profile_pic.url }}" alt="" class="profile-img">
+                                    <p class="expertise">Expertise: {{ item.expertise }}</p>
                                 </a>
                             </div>
-                            <div class="row-cols-6">
+                            <div class="col-md-8 profile-body">
                                 <a href="{{ item.web_link }}" target="_blank" rel="noopener" class="">
                                     <h3 class="card-title">{{ item.name }}</h3>
                                     <h4 class="card-title">{{ item.job_title }}</h4>
                                     <p class="">{{ item.summary | safe }}</p>
-                                    <p class="">{{ item.expertise }}</p>
+                                    
                                 </a>
                             </div>
-                        </div>
                     {% endif %}
                 {% endfor %}
             </div>
@@ -32,7 +31,7 @@
     </div>
 
     <div>
-        <h2 class="text-center">Research Fellows</h2>
+        <h2 class="text-center">Researchers</h2>
         <div>
             <div class="row card-container pb-3 justify-content-center">
                 {% for item in profile_list %}

@@ -173,15 +173,17 @@ p {
 
 
 /* People Page */
-.profile-img {
+.profile-img-container {
+    padding-top: 40px;
+}
+
+.profile-img, .expertise {
     max-width: 250px;
 }
 
 .profile-body {
-    max-width: 250px;
-    /* margin: 8px; */
+    padding: 30px 30px 5px 5px;
 }
-
 
 /* Footer */
 .social-media-links {
@@ -205,6 +207,14 @@ p {
     .graphic {
         width: 400px;
     }
+
+    .profile-body {
+        padding: 30px 30px 5px 10px;
+    }
+
+    .profile-container {
+        max-width: 1100px;
+    }
 } 
 
 @media (min-width: 992px) {
@@ -215,6 +225,9 @@ p {
         font-size: 26px;
         padding-top: 8px;
         height: 60px;
+    }
+    .profile-body {
+        max-width: 650px;
     }
 } 
 

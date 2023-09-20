@@ -11,13 +11,19 @@
                 {% for item in profile_list %}
                     {% if item.job_category == 'Centre Director' %}
                         <div class="profile-body col col-md-12 m-4">
-                            <a href="{{ item.web_link }}" target="_blank" rel="noopener" class="">
-                                <h3 class="card-title">{{ item.name }}</h3>
-                                <img src="{{ item.profile_pic.url }}" alt="" class="profile-img">
-                                <h4 class="card-title">{{ item.job_title }}</h4>
-                                <p class="">{{ item.discipline }}</p>
-                                <p class="">{{ item.summary }}</p>
-                            </a>
+                            <div class="row-cols-6">
+                                <a href="{{ item.web_link }}" target="_blank" rel="noopener" class="">
+                                    <img src="{{ item.profile_pic.url }}" alt="" class="profile-img">
+                                </a>
+                            </div>
+                            <div class="row-cols-6">
+                                <a href="{{ item.web_link }}" target="_blank" rel="noopener" class="">
+                                    <h3 class="card-title">{{ item.name }}</h3>
+                                    <h4 class="card-title">{{ item.job_title }}</h4>
+                                    <p class="">{{ item.summary | safe }}</p>
+                                    <p class="">{{ item.expertise }}</p>
+                                </a>
+                            </div>
                         </div>
                     {% endif %}
                 {% endfor %}
@@ -30,13 +36,13 @@
         <div>
             <div class="row card-container pb-3 justify-content-center">
                 {% for item in profile_list %}
-                    {% if item.job_category == 'Research Fellow' %}
+                    {% if item.job_category == 'Researcher' %}
                         <div class="profile-body col col-md-12 m-4">
                             <a href="https://politics.exeter.ac.uk/staff/coan/" class="">
                                 <h3 class="card-title">{{ item.name }}</h3>
                                 <img src="{{ item.profile_pic.url }}" alt="" class="profile-img">
                                 <h4 class="card-title">{{ item.job_title }}</h4>
-                                <p class="">{{ item.discipline }}</p>
+                                <!-- <p class="">{{ item.discipline }}</p> -->
                                 <p class="">{{ item.summary }}</p>
                             </a>
                         </div>

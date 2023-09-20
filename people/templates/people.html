@@ -16,12 +16,11 @@
                                     <p class="expertise">Expertise: {{ item.expertise }}</p>
                                 </a>
                             </div>
-                            <div class="col-md-8 profile-body">
+                            <div class="col-md-8 profile-body pb-2">
                                 <a href="{{ item.web_link }}" target="_blank" rel="noopener" class="">
-                                    <h3 class="card-title">{{ item.name }}</h3>
+                                    <h3 class="card-title"><strong>{{ item.name }}</strong></h3>
                                     <h4 class="card-title">{{ item.job_title }}</h4>
                                     <p class="">{{ item.summary | safe }}</p>
-                                    
                                 </a>
                             </div>
                     {% endif %}

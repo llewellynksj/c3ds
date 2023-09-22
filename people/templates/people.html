@@ -5,24 +5,24 @@
 <section class="container-fluid">
     <h1 class="my-3 text-center"><strong>People</strong></h1>
     <div>
-        <h2 class="text-center">Centre Directors</h2>
+        <h2 class="text-center py-3">Centre Directors</h2>
         <div>
-            <div class="row card-container pb-3 d-flex justify-content-center profile-container">
+            <div class="row card-container py-3 d-flex justify-content-center profile-container">
                 {% for item in profile_list %}
                     {% if item.job_category == 'Centre Director' %}
                             <div class="col-md-4 d-flex justify-content-center align-items-top">
                                 <a href="{{ item.web_link }}" target="_blank" rel="noopener" class="profile-img-container">
                                     <img src="{{ item.profile_pic.url }}" alt="" class="profile-img">
-                                    <p class="expertise">Expertise: {{ item.expertise }}</p>
                                 </a>
                             </div>
                             <div class="col-md-8 profile-body pb-2">
                                 <a href="{{ item.web_link }}" target="_blank" rel="noopener" class="">
-                                    <h3 class="card-title"><strong>{{ item.name }}</strong></h3>
-                                    <h4 class="card-title">{{ item.job_title }}</h4>
-                                    <p class="">{{ item.summary | safe }}</p>
+                                    <h3 class="profile-title">{{ item.name }}</h3>
+                                    <h4 class="profile-text">{{ item.job_title }}</h4>
+                                    <p class="profile-text">{{ item.summary | safe }}</p>
+                                    <p class="profile-text">Expertise: {{ item.expertise }}</p>
                                 </a>
-                            </div>
+                            </div>                            
                     {% endif %}
                 {% endfor %}
             </div>
@@ -30,20 +30,24 @@
     </div>
 
     <div>
-        <h2 class="text-center">Researchers</h2>
+        <h2 class="text-center mt-4 py-3">Researchers</h2>
         <div>
-            <div class="row card-container pb-3 justify-content-center">
+            <div class="row card-container py-3 d-flex justify-content-center profile-container">
                 {% for item in profile_list %}
-                    {% if item.job_category == 'Researcher' %}
-                        <div class="profile-body col col-md-12 m-4">
-                            <a href="https://politics.exeter.ac.uk/staff/coan/" class="">
-                                <h3 class="card-title">{{ item.name }}</h3>
-                                <img src="{{ item.profile_pic.url }}" alt="" class="profile-img">
-                                <h4 class="card-title">{{ item.job_title }}</h4>
-                                <!-- <p class="">{{ item.discipline }}</p> -->
-                                <p class="">{{ item.summary }}</p>
-                            </a>
-                        </div>
+                    {% if item.job_category == 'Researchers' %}
+                            <div class="col-md-4 d-flex justify-content-center align-items-top">
+                                <a href="{{ item.web_link }}" target="_blank" rel="noopener" class="profile-img-container">
+                                    <img src="{{ item.profile_pic.url }}" alt="" class="profile-img">
+                                </a>
+                            </div>
+                            <div class="col-md-8 profile-body pb-2">
+                                <a href="{{ item.web_link }}" target="_blank" rel="noopener" class="">
+                                    <h3 class="profile-title">{{ item.name }}</h3>
+                                    <h4 class="profile-text">{{ item.job_title }}</h4>
+                                    <p class="profile-text">{{ item.summary | safe }}</p>
+                                    <p class="profile-text">Expertise: {{ item.expertise }}</p>
+                                </a>
+                            </div>                            
                     {% endif %}
                 {% endfor %}
             </div>

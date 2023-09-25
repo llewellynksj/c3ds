@@ -3,26 +3,27 @@
 {% block content %}
 
 <section class="container-fluid">
-    <h1 class="my-3 text-center"><strong>Publications</strong></h1>
+    <h1 class="my-3 pb-3 text-center"><strong>Publications</strong></h1>
 
     {% for item in queryset %}
-        <div class="row py-3 d-flex justify-content-start pub-container">
-            <div class="col-md-4 d-flex justify-content-end align-items-top pub-inner">
-                <a href="{{ item.url }}" target="_blank" rel="noopener" class="img-container">
+        <div class="row py-3 d-flex pub-container">
+            <div class="col-12 col-sm-12 col-md-5 col-lg-4 col-xxl-3 d-flex pub-inner">
+                <a href="{{ item.url }}" target="_blank" rel="noopener" class="pub-img-container">
                     <img src="{{ item.thumbnail.url }}" alt="" class="pub-img">
                 </a>
             </div>
-            <div class="col-md-8 profile-body pb-2">
-                <h3 class="">{{ item.title }}</h3>
+            <div class="pb-3 col-12 col-sm-12 col-md-7 col-lg-8 col-xxl-9 pub-inner">
+                <h2 class="">{{ item.title }}</h2>
                 <p class="">Date: {{ item.date }}</p>
                 <p class="">Authors: {{ item.authors }}</p>
                 <p class="">Type: {{ item.type }}</p>
                 <p class="">Publication: {{ item.publication }}</p>
-                <p class="">{{ item.description | safe }}</p>
-                <a href="{{ item.url }}" target="_blank" rel="noopener" class=""></a>
+                <p class="profile-text">{{ item.description | safe }}</p>
+                <a href="{{ item.url }}" target="_blank" rel="noopener" class="hover-link">
                     <p class="profile-text">Read More</p>
                 </a>
             </div>
+            <hr class="line-break">
         </div>
     {% endfor %}
     

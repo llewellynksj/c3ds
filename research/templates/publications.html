@@ -4,6 +4,29 @@
 
 <section class="container-fluid">
     <h1 class="my-3 text-center"><strong>Publications</strong></h1>
-</section> 
+
+    {% for item in queryset %}
+        <div class="row py-3 d-flex justify-content-start pub-container">
+            <div class="col-md-4 d-flex justify-content-end align-items-top pub-inner">
+                <a href="{{ item.url }}" target="_blank" rel="noopener" class="img-container">
+                    <img src="{{ item.thumbnail.url }}" alt="" class="pub-img">
+                </a>
+            </div>
+            <div class="col-md-8 profile-body pb-2">
+                <h3 class="">{{ item.title }}</h3>
+                <p class="">Date: {{ item.date }}</p>
+                <p class="">Authors: {{ item.authors }}</p>
+                <p class="">Type: {{ item.type }}</p>
+                <p class="">Publication: {{ item.publication }}</p>
+                <p class="">{{ item.description | safe }}</p>
+                <a href="{{ item.url }}" target="_blank" rel="noopener" class=""></a>
+                    <p class="profile-text">Read More</p>
+                </a>
+            </div>
+        </div>
+    {% endfor %}
+    
+
+</section>
 
 {% endblock %}

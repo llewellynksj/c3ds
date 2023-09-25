@@ -12,7 +12,9 @@ class Publication(models.Model):
     type = models.CharField(max_length=255)
     publication = models.CharField(max_length=255)
     authors = models.TextField(max_length=2000)
-    description = models.TextField(help_text='For consistency please use Arial font, size 12, line height 1.4')
+    description = models.TextField(
+        help_text='For consistency please use Arial font,\
+             size 12, line height 1.4')
     url = models.URLField()
 
     class Meta:

@@ -6,6 +6,9 @@ from datetime import datetime
 
 
 class Profile(models.Model):
+    """
+    Profile model to hold information about Centre team members
+    """
     CATEGORY = [
         ('Centre Director', 'Centre Director'),
         ('Researchers', 'Researchers'),

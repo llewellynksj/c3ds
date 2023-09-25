@@ -173,7 +173,7 @@ p {
 
 
 /* People Page */
-.profile-img-container {
+.img-container {
     padding-top: 40px;
 }
 
@@ -195,6 +195,20 @@ p {
 
 .profile-text {
     text-align: center;
+}
+
+/* Publications Page */
+.pub-container {
+    /* max-width: 1400px; */
+}
+
+.pub-inner {
+    /* border: 1px solid black; */
+}
+
+.pub-image {
+    max-width: 50%;
+    height: auto;
 }
 
 /* Footer */

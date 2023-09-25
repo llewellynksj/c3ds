@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     'research',
     'about',
     'resources',
+    'events',
 ]
 
 MIDDLEWARE = [

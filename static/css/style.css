@@ -75,7 +75,7 @@ p {
 }
 
 .line-break {
-    max-width: 800px;
+    max-width: 1000px;
     margin: auto;
 }
 
@@ -254,6 +254,10 @@ footer {
 
 /* Media queries */
 @media (min-width: 768px) {
+    .line-break {
+        max-width: 100%;
+    }
+
     .twitter-container {
         display: block;
     }

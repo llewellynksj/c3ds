@@ -1,3 +1,8 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+def display_resources(request):
+    """
+    Displays resources page
+    """
+    return render(request, 'resources.html', {})

@@ -232,8 +232,16 @@ p {
 .acc-button {
     color: black;
     position: absolute;
-    bottom: 25px;
+    bottom: 50px;
     left: 25px;
+}
+
+.acc-box {
+    margin-bottom: 85px;
+}
+
+.acc-card {
+    background-color: #DBE5E5;
 }
 
 /* Publications Page */

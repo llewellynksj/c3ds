@@ -4,9 +4,11 @@
 
 <section class="container-fluid">
     <h1 class="my-3 text-center"><strong>People</strong></h1>
-    <div>
-        <h2 class="text-center py-3">Centre Directors</h2>
-        <div class="row card-container py-3 d-flex justify-content-center profile-container">
+    <fieldset class="p-3 profile-container">
+        <legend class="float-none w-auto px-2 text-center">
+           <h3 class="text-center py-3">Centre Directors</h3>
+        </legend>
+        <div class="row card-container py-3 d-flex justify-content-center">
             {% for item in profile_list %}
             {% if item.job_category == 'Centre Director' %}
             <div class="col-md-4 d-flex justify-content-center align-items-top">
@@ -25,32 +27,33 @@
             {% endif %}
             {% endfor %}
         </div>
-    </div>
+    </fieldset>        
 
-    <div>
-        <h2 class="text-center mt-4 py-3">Researchers</h2>
-        <div>
-            <div class="row card-container py-3 d-flex justify-content-center profile-container">
-                {% for item in profile_list %}
-                {% if item.job_category == 'Researchers' %}
-                <div class="col-md-4 d-flex justify-content-center align-items-top">
-                    <a href="{{ item.web_link }}" target="_blank" rel="noopener" class="img-container">
-                        <img src="{{ item.profile_pic.url }}" alt="" class="profile-img">
-                    </a>
-                </div>
-                <div class="col-md-8 profile-body pb-2">
-                    <a href="{{ item.web_link }}" target="_blank" rel="noopener" class="">
-                        <h3 class="profile-title">{{ item.name }}</h3>
-                        <h4 class="profile-text">{{ item.job_title }}</h4>
-                        <p class="profile-text">{{ item.summary | safe }}</p>
-                        <p class="profile-text">Expertise: {{ item.expertise }}</p>
-                    </a>
-                </div>
-                {% endif %}
-                {% endfor %}
+    <fieldset class="mt-4 p-3 profile-container">
+        <legend class="float-none w-auto px-2 text-center">
+           <h3 class="text-center py-3">Researchers</h3>
+        </legend>
+        <div class="row card-container py-3 d-flex justify-content-center">
+            {% for item in profile_list %}
+            {% if item.job_category == 'Researchers' %}
+            <div class="col-md-4 d-flex justify-content-center align-items-top">
+                <a href="{{ item.web_link }}" target="_blank" rel="noopener" class="img-container">
+                    <img src="{{ item.profile_pic.url }}" alt="" class="profile-img">
+                </a>
             </div>
+            <div class="col-md-8 profile-body pb-2">
+                <a href="{{ item.web_link }}" target="_blank" rel="noopener" class="">
+                    <h3 class="profile-title">{{ item.name }}</h3>
+                    <h4 class="profile-text">{{ item.job_title }}</h4>
+                    <p class="profile-text">{{ item.summary | safe }}</p>
+                    <p class="profile-text">Expertise: {{ item.expertise }}</p>
+                </a>
+            </div>
+            {% endif %}
+            {% endfor %}
         </div>
-    </div>
+    </fieldset>  
+
 </section>
 
 {% endblock %}

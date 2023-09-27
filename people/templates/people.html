@@ -3,20 +3,39 @@
 {% block content %}
 
 <section class="container-fluid profile-section">
-    <h1 class="mx-3 text-left"><strong>PEOPLE</strong></h1>
+    <h1 class="m-3 text-left"><strong>People</strong></h1>
 
     <div class="mx-3">
-        <h3 class="text-left">Centre Directors</h3>
-        <div class="container-fluid">
+        <h3 class="text-left my-3">Centre Directors</h3>
+        <div class="container-fluid pt-3">
             <div class="row profile-box">
                 {% for item in profile_list %}
                 {% if item.job_category == 'Centre Director' %}
                     <div class="card profile-card col-md-6 col-lg-4">
                         <div class="card-body">
                             <img src="{{ item.profile_pic.url }}" alt="">
-                            <h3 class="card-title">{{ item.name }}</h3>
-                            <h4 class="card-subtitle mb-2 text-muted">{{ item.job_title }}</h4>
-                            <p class="card-text">Expertise: {{ item.expertise }}</p>
+                            <h4 class="profile-title">{{ item.name }}</h4>
+                            <h4 class="profile-job-title mb-2 text-muted">{{ item.job_title }}</h4>
+                            <p>{{ item.summary | safe }}</p>
+                            <div class="expertise">
+                                <p class="p-2"><em>Expertise: {{ item.expertise }}</em></p>
+                            </div>
+                            <!-- <button class="btn btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExpertise{{item.pk}}" aria-expanded="false" aria-controls="collapseExpertise{{item.pk}}">
+                                Expertise
+                            </button>
+                            <div class="collapse" id="collapseExpertise{{item.pk}}">
+                                <div class="card card-body">
+                                  {{ item.expertise }}
+                                </div>
+                            </div>
+                            <button class="btn btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSummary{{item.pk}}" aria-expanded="false" aria-controls="collapseExpertise{{item.pk}}">
+                                Bio
+                            </button>
+                            <div class="collapse" id="collapseSummary{{item.pk}}">
+                                <div class="card card-body">
+                                  {{ item.summary | safe }}
+                                </div>
+                            </div> -->
                         </div>
                     </div>
                 {% endif %}
@@ -26,17 +45,51 @@
     </div>
 
     <div class="mx-3">
-        <h3 class="text-left">Researchers</h3>
-        <div class="container-fluid">
+        <h3 class="text-left my-3">Researchers</h3>
+        <div class="container-fluid pt-3">
             <div class="row profile-box">
                 {% for item in profile_list %}
                 {% if item.job_category == 'Researchers' %}
-                    <div class="card profile-card">
+                    <div class="card profile-card col-md-6 col-lg-4">
                         <div class="card-body">
                             <img src="{{ item.profile_pic.url }}" alt="">
-                            <h3 class="card-title">{{ item.name }}</h3>
-                            <h4 class="card-subtitle mb-2 text-muted">{{ item.job_title }}</h4>
-                            <p class="card-text">Expertise: {{ item.expertise }}</p>
+                            <h4 class="profile-title">{{ item.name }}</h4>
+                            <h4 class="profile-job-title mb-2 text-muted">{{ item.job_title }}</h4>
+                            <p>{{ item.summary | safe }}</p>
+                            <div class="expertise">
+                                <p class="p-2"><em>Expertise: {{ item.expertise }}</em></p>
+                            </div>
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading{{category.id}}">
+                                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ item.id }}" aria-expanded="true" aria-controls="collapse{{ item.id }}">
+                                        Expertise
+                                      </button>
+                                    </h2>
+                                    <div id="collapse{{ item.id }}" class="accordion-collapse collapse {% if forloop.first %}show{% endif %}" aria-labelledby="heading{{ item.id }}" data-bs-parent="#accordionExample">
+                                      <div class="accordion-body">
+                                        <p>{{ item.expertise }}</p>
+                                      </div>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                            <!-- <button class="btn btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExpertise{{item.pk}}" aria-expanded="false" aria-controls="collapseExpertise{{item.pk}}">
+                                Expertise
+                            </button>
+                            <div class="collapse" id="collapseExpertise{{item.pk}}">
+                                <div class="card card-body">
+                                  {{ item.expertise }}
+                                </div>
+                            </div>
+                            <button class="btn btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSummary{{item.pk}}" aria-expanded="false" aria-controls="collapseExpertise{{item.pk}}">
+                                Bio
+                            </button>
+                            <div class="collapse" id="collapseSummary{{item.pk}}">
+                                <div class="card card-body">
+                                  {{ item.summary | safe }}
+                                </div>
+                            </div> -->
                         </div>
                     </div>
                 {% endif %}
@@ -44,56 +97,6 @@
             </div>
         </div> 
     </div>
-
-    <!-- <fieldset class="p-3 profile-container">
-        <legend class="float-none w-auto px-2 text-center">
-           <h3 class="text-center py-3">Centre Directors</h3>
-        </legend>
-        <div class="row card-container py-3 d-flex justify-content-center">
-            {% for item in profile_list %}
-            {% if item.job_category == 'Centre Director' %}
-            <div class="col-md-4 d-flex justify-content-center align-items-top">
-                <a href="{{ item.web_link }}" target="_blank" rel="noopener" class="img-container">
-                    <img src="{{ item.profile_pic.url }}" alt="" class="profile-img">
-                </a>
-            </div>
-            <div class="col-md-8 profile-body pb-2">
-                <a href="{{ item.web_link }}" target="_blank" rel="noopener" class="">
-                    <h3 class="profile-title">{{ item.name }}</h3>
-                    <h4 class="profile-text">{{ item.job_title }}</h4>
-                    <p class="profile-text">{{ item.summary | safe }}</p>
-                    <p class="profile-text">Expertise: {{ item.expertise }}</p>
-                </a>
-            </div>
-            {% endif %}
-            {% endfor %}
-        </div>
-    </fieldset>         -->
-
-    <!-- <fieldset class="mt-4 p-3 profile-container">
-        <legend class="float-none w-auto px-2 text-center">
-           <h3 class="text-center py-3">Researchers</h3>
-        </legend>
-        <div class="row card-container py-3 d-flex justify-content-center">
-            {% for item in profile_list %}
-            {% if item.job_category == 'Researchers' %}
-            <div class="col-md-4 d-flex justify-content-center align-items-top">
-                <a href="{{ item.web_link }}" target="_blank" rel="noopener" class="img-container">
-                    <img src="{{ item.profile_pic.url }}" alt="" class="profile-img">
-                </a>
-            </div>
-            <div class="col-md-8 profile-body pb-2">
-                <a href="{{ item.web_link }}" target="_blank" rel="noopener" class="">
-                    <h3 class="profile-title">{{ item.name }}</h3>
-                    <h4 class="profile-text">{{ item.job_title }}</h4>
-                    <p class="profile-text">{{ item.summary | safe }}</p>
-                    <p class="profile-text">Expertise: {{ item.expertise }}</p>
-                </a>
-            </div>
-            {% endif %}
-            {% endfor %}
-        </div>
-    </fieldset>   -->
 
 </section>
 

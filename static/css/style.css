@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@200;300&family=Montserrat:ital,wght@0,200;0,300;0,500;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
 
 /* Base styles */
 body {
-    font-family: Barlow , sans-serif;
+    font-family: Roboto , sans-serif;
     color: black;
 }
 
@@ -31,9 +31,8 @@ a {
 }
 
 h1 {
-    font-family: Montserrat, sans-serif;
-    font-size: 21px;
-    /* text-transform: uppercase; */
+    font-size: 25px;
+    text-transform: uppercase;
 }
 
 .page-title {
@@ -41,7 +40,6 @@ h1 {
 }
 
 h2 {
-    font-family: Montserrat, sans-serif;
     font-size: 17px;
 }
 
@@ -198,7 +196,7 @@ p {
 
 /* People Page */
 .profile-section {
-    max-width: 1300px;
+    max-width: 1500px;
 }
 
 .profile-box {
@@ -221,9 +219,19 @@ p {
 }
 
 .profile-card {
-    max-width: 330px;
+    max-width: 400px;
+    min-height: 400px;
     background-color: #C7D6D6;
     margin-bottom: 60px;
+}
+
+.profile-job-title {
+    font-size: 18px;
+}
+
+.expertise {
+    border: 1px solid grey;
+    border-radius: 18px;
 }
 /* Publications Page */
 .pub-container {

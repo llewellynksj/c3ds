@@ -49,10 +49,10 @@
                     </div>
                     <div class="row card-container py-3">
                         {% for item in overview_card_objects %}
-                        <div class="card-body col-12 col-sm-6">
+                        <div class="card-inner card-body col-12 col-sm-6">
                             <a href="#" class="">
-                                <h2 class="card-title pl-3">{{ item.title }}</h2>
-                                <img src="{{ item.card_image.url }}" alt="" class="card-img">
+                                <h2 class="card-heading pl-3">{{ item.title }}</h2>
+                                <img src="{{ item.card_image.url }}" alt="" class="overview-img">
                                 <p class="pt-2">{{ item.summary }}</p>
                             </a>
                         </div>
@@ -107,7 +107,7 @@
                 <img src="https://res.cloudinary.com/ddqyimddv/image/upload/v1694777866/cyclegraphic_kecowt.png"
                     class="graphic" alt="">
             </div>
-            <div class="col-md-5 cold-sm-12 d-flex justify-content-center">
+            <div class="col-md-5 col-sm-12 d-flex justify-content-center">
                 <div class="mt-4 pt-4 flex-column">
                     <div class="col-12 col-sm-3 text-center objective-inner">
                         <h2 class="pt-1">ENGAGING</h2>
@@ -125,10 +125,6 @@
             </div>
         </div>
         <br><br>
-        <!-- <div>
-                    <img class="screen-break-bottom"
-                        src="https://res.cloudinary.com/ddqyimddv/image/upload/v1692185905/newwave-cropped_ubfxhe.svg" alt="">
-                </div> -->
     </section>
 
 

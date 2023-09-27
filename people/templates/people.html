@@ -4,7 +4,25 @@
 
 <section class="container-fluid">
     <h1 class="my-3 text-center"><strong>People</strong></h1>
+
     <fieldset class="p-3 profile-container">
+        <legend class="float-none w-auto px-2 text-center">
+           <h3 class="text-center py-3">Centre Directors</h3>
+        </legend>
+        {% for item in profile_list %}
+        {% if item.job_category == 'Centre Director' %}
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">{{ item.name }}</h3>
+                    <h4 class="card-subtitle mb-2 text-muted">{{ item.job_title }}</h4>
+                    <p class="card-text">Expertise: {{ item.expertise }}</p>
+                </div>
+            </div>
+        {% endif %}
+        {% endfor %}
+    </fieldset>
+
+    <!-- <fieldset class="p-3 profile-container">
         <legend class="float-none w-auto px-2 text-center">
            <h3 class="text-center py-3">Centre Directors</h3>
         </legend>
@@ -27,7 +45,7 @@
             {% endif %}
             {% endfor %}
         </div>
-    </fieldset>        
+    </fieldset>         -->
 
     <fieldset class="mt-4 p-3 profile-container">
         <legend class="float-none w-auto px-2 text-center">

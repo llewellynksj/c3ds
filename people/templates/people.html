@@ -2,16 +2,36 @@
 
 {% block content %}
 
-<section class="container-fluid">
-    <h1 class="my-3 text-center"><strong>People</strong></h1>
+<section class="container-fluid profile-section">
+    <h1 class="mx-3 text-left"><strong>PEOPLE</strong></h1>
 
-    <div class="p-3">
-        <h3 class="text-center py-3">Centre Directors</h3>
+    <div class="mx-3">
+        <h3 class="text-left">Centre Directors</h3>
         <div class="container-fluid">
             <div class="row profile-box">
                 {% for item in profile_list %}
                 {% if item.job_category == 'Centre Director' %}
-                    <div class="card profile-card col-sm m-3">
+                    <div class="card profile-card col-md-6 col-lg-4">
+                        <div class="card-body">
+                            <img src="{{ item.profile_pic.url }}" alt="">
+                            <h3 class="card-title">{{ item.name }}</h3>
+                            <h4 class="card-subtitle mb-2 text-muted">{{ item.job_title }}</h4>
+                            <p class="card-text">Expertise: {{ item.expertise }}</p>
+                        </div>
+                    </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div> 
+    </div>
+
+    <div class="mx-3">
+        <h3 class="text-left">Researchers</h3>
+        <div class="container-fluid">
+            <div class="row profile-box">
+                {% for item in profile_list %}
+                {% if item.job_category == 'Researchers' %}
+                    <div class="card profile-card">
                         <div class="card-body">
                             <img src="{{ item.profile_pic.url }}" alt="">
                             <h3 class="card-title">{{ item.name }}</h3>

@@ -229,10 +229,13 @@ p {
     font-size: 18px;
 }
 
-.expertise {
-    border: 1px solid grey;
-    border-radius: 18px;
+.acc-button {
+    color: black;
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
 }
+
 /* Publications Page */
 .pub-container {
     max-width: 1200px;

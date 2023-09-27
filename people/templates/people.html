@@ -16,26 +16,17 @@
                             <img src="{{ item.profile_pic.url }}" alt="">
                             <h4 class="profile-title">{{ item.name }}</h4>
                             <h4 class="profile-job-title mb-2 text-muted">{{ item.job_title }}</h4>
-                            <p>{{ item.summary | safe }}</p>
-                            <div class="expertise">
-                                <p class="p-2"><em>Expertise: {{ item.expertise }}</em></p>
-                            </div>
-                            <!-- <button class="btn btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExpertise{{item.pk}}" aria-expanded="false" aria-controls="collapseExpertise{{item.pk}}">
-                                Expertise
-                            </button>
-                            <div class="collapse" id="collapseExpertise{{item.pk}}">
-                                <div class="card card-body">
-                                  {{ item.expertise }}
-                                </div>
-                            </div>
-                            <button class="btn btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSummary{{item.pk}}" aria-expanded="false" aria-controls="collapseExpertise{{item.pk}}">
-                                Bio
+                            <p>Expertise: {{ item.expertise }}</p>
+                            <p>{{ item.summary | safe | truncatewords_html:20 }}</p>
+                    
+                            <button class="btn btn-outline-dark acc-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSummary{{item.pk}}" aria-expanded="false" aria-controls="collapseExpertise{{item.pk}}">
+                                Full Bio
                             </button>
                             <div class="collapse" id="collapseSummary{{item.pk}}">
                                 <div class="card card-body">
                                   {{ item.summary | safe }}
                                 </div>
-                            </div> -->
+                            </div>
                         </div>
                     </div>
                 {% endif %}
@@ -55,41 +46,17 @@
                             <img src="{{ item.profile_pic.url }}" alt="">
                             <h4 class="profile-title">{{ item.name }}</h4>
                             <h4 class="profile-job-title mb-2 text-muted">{{ item.job_title }}</h4>
-                            <p>{{ item.summary | safe }}</p>
-                            <div class="expertise">
-                                <p class="p-2"><em>Expertise: {{ item.expertise }}</em></p>
-                            </div>
-                            <div class="accordion" id="accordionExample">
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="heading{{category.id}}">
-                                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ item.id }}" aria-expanded="true" aria-controls="collapse{{ item.id }}">
-                                        Expertise
-                                      </button>
-                                    </h2>
-                                    <div id="collapse{{ item.id }}" class="accordion-collapse collapse {% if forloop.first %}show{% endif %}" aria-labelledby="heading{{ item.id }}" data-bs-parent="#accordionExample">
-                                      <div class="accordion-body">
-                                        <p>{{ item.expertise }}</p>
-                                      </div>
-                                    </div>
-                                </div>
-                               
-                            </div>
-                            <!-- <button class="btn btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExpertise{{item.pk}}" aria-expanded="false" aria-controls="collapseExpertise{{item.pk}}">
-                                Expertise
-                            </button>
-                            <div class="collapse" id="collapseExpertise{{item.pk}}">
-                                <div class="card card-body">
-                                  {{ item.expertise }}
-                                </div>
-                            </div>
-                            <button class="btn btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSummary{{item.pk}}" aria-expanded="false" aria-controls="collapseExpertise{{item.pk}}">
-                                Bio
+                            <p>Expertise: {{ item.expertise }}</p>
+                            <p>{{ item.summary | safe | truncatewords_html:20 }}</p>
+                    
+                            <button class="btn btn-outline-secondary acc-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSummary{{item.pk}}" aria-expanded="false" aria-controls="collapseExpertise{{item.pk}}">
+                                Full Bio
                             </button>
                             <div class="collapse" id="collapseSummary{{item.pk}}">
                                 <div class="card card-body">
                                   {{ item.summary | safe }}
                                 </div>
-                            </div> -->
+                            </div>
                         </div>
                     </div>
                 {% endif %}

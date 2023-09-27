@@ -16,6 +16,11 @@ i {
     height: auto;
 }
 
+.centre-logo {
+    width: 100px;
+    height: auto;
+}
+
 a {
     text-decoration: none;
     color: #252525;

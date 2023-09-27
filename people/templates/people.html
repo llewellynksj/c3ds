@@ -1,26 +1,31 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class="banner d-flex align-items-center">
+    <div class="page-container">
+        <h1 class="m-3 text-left banner-title"><strong>People</strong></h1>
+    </div>
+</div>
 
-<section class="container-fluid profile-section">
-    <h1 class="m-3 text-left"><strong>People</strong></h1>
-
+<section class="container-fluid page-container profile-section">
     <div class="mx-3">
-        <h3 class="text-left my-3">Centre Directors</h3>
-        <div class="container-fluid pt-3">
+        <!-- <h3 class="text-center my-3">Centre Directors</h3> -->
+        <div class="container-fluid my-4 pt-3">
             <div class="row profile-box">
                 {% for item in profile_list %}
-                {% if item.job_category == 'Centre Director' %}
                     <div class="card profile-card col-md-6 col-lg-4">
                         <div class="card-body">
                             <img src="{{ item.profile_pic.url }}" alt="">
                             <h4 class="profile-title">{{ item.name }}</h4>
-                            <h4 class="profile-job-title mb-2 text-muted">{{ item.job_title }}</h4>
-                            <p>Expertise: {{ item.expertise }}</p>
-                            <p>{{ item.summary | safe | truncatewords_html:20 }}</p>
+                            {% if item.job_category == 'Centre Director' %}
+                                <h5 class="profile-title"><em>{{ item.job_category }}</em></h5>
+                            {% endif %}
+                            <h4 class="profile-job-title mb-2">{{ item.job_title }}</h4>
+                            <p class="pt-2"><em>Expertise: {{ item.expertise }}</em></p>
+                            <!-- <p>{{ item.summary | safe | truncatewords_html:20 }}</p> -->
                     
                             <button class="btn btn-outline-dark acc-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSummary{{item.pk}}" aria-expanded="false" aria-controls="collapseExpertise{{item.pk}}">
-                                Full Bio
+                                Show Bio
                             </button>
                             <div class="collapse acc-box" id="collapseSummary{{item.pk}}">
                                 <div class="card card-body acc-card">
@@ -29,14 +34,13 @@
                             </div>
                         </div>
                     </div>
-                {% endif %}
                 {% endfor %}
             </div>
         </div> 
     </div>
 
-    <div class="mx-3">
-        <h3 class="text-left my-3">Researchers</h3>
+    <!-- <div class="mx-3">
+        <h3 class="text-center my-3">Researchers</h3>
         <div class="container-fluid pt-3">
             <div class="row profile-box">
                 {% for item in profile_list %}
@@ -46,7 +50,7 @@
                             <img src="{{ item.profile_pic.url }}" alt="">
                             <h4 class="profile-title">{{ item.name }}</h4>
                             <h4 class="profile-job-title mb-2 text-muted">{{ item.job_title }}</h4>
-                            <p>Expertise: {{ item.expertise }}</p>
+                            <p><em>Expertise: {{ item.expertise }}</em></p>
                             <p>{{ item.summary | safe | truncatewords_html:20 }}</p>
                     
                             <button class="btn btn-outline-secondary acc-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSummary{{item.pk}}" aria-expanded="false" aria-controls="collapseExpertise{{item.pk}}">
@@ -62,7 +66,7 @@
                 {% endif %}
                 {% endfor %}
             </div>
-        </div> 
+        </div>  -->
     </div>
 
 </section>

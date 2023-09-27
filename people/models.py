@@ -36,5 +36,11 @@ class Profile(models.Model):
         default='www.google.com',
         help_text="Please enter full web address including 'https://'")
 
+    class Meta:
+        """
+        Metadata Class Container
+        """
+        ordering = ["created_on"]
+
     def __str__(self):
         return self.name

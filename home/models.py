@@ -4,8 +4,10 @@ from cloudinary.models import CloudinaryField
 
 class Carousel(models.Model):
     hero_image = CloudinaryField('image', default='hero_placeholder')
-    tagline_text = models.CharField(max_length=100, blank=True)
-    order = models.PositiveIntegerField(help_text='Enter 1, 2, or 3', unique=True, default=1)
+    tagline_text = models.CharField(max_length=300, blank=True)
+    order = models.PositiveIntegerField(
+        help_text='Enter 1, 2, or 3', unique=True, default=1)
+    url = models.URLField(null=True, blank=True)
 
     class Meta:
         ordering = ['order']

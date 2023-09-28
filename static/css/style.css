@@ -12,6 +12,10 @@ nav {
     padding: 0;
 }
 
+.nav-link, .dropdown-item {
+    color: black;
+}
+
 i {
     color: #648A8B;
     font-size: 18px;

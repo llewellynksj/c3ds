@@ -12,16 +12,17 @@
         <div class="container-fluid my-4 pt-3">
             <div class="row profile-box">
                 {% for item in profile_list %}
-                    <div class="card profile-card col-md-6 col-lg-4">
+                    <div class="card profile-card grow col-md-6 col-lg-4">
                         <div class="card-body">
-                            <img src="{{ item.profile_pic.url }}" alt="">
-                            <h4 class="profile-title">{{ item.name }}</h4>
-                            {% if item.job_category == 'Centre Director' %}
-                                <h5 class="profile-title"><em>{{ item.job_category }}</em></h5>
-                            {% endif %}
-                            <h4 class="profile-job-title mb-2">{{ item.job_title }}</h4>
-                            <p class="pt-2"><em>Expertise: {{ item.expertise }}</em></p>
-                    
+                            <a href="{{ item.web_link }}" target="_blank" rel="noopener" aria-label="visit staff webpage (opens in new tab)">
+                                <img src="{{ item.profile_pic.url }}" alt="">
+                                <h4 class="profile-title">{{ item.name }}</h4>
+                                {% if item.job_category == 'Centre Director' %}
+                                    <h5 class="profile-title"><em>{{ item.job_category }}</em></h5>
+                                {% endif %}
+                                <h4 class="profile-job-title mb-2">{{ item.job_title }}</h4>
+                                <p class="pt-2"><em>Expertise: {{ item.expertise }}</em></p>
+                            </a>
                             <button class="btn btn-outline-dark acc-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSummary{{item.pk}}" aria-expanded="false" aria-controls="collapseExpertise{{item.pk}}">
                                 Show Bio
                             </button>

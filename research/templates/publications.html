@@ -1,10 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class="banner">
+    <div class="page-container d-flex align-items-center">
+        <h1 class="m-3 pt-2 text-left banner-title"><strong>Publications</strong></h1>
+    </div>
+</div>
 
 <section class="container-fluid">
-    <h1 class="my-3 pb-3 text-center"><strong>Publications</strong></h1>
-
     {% for item in queryset %}
         <div class="row py-3 d-flex pub-container">
             <div class="col-12 col-sm-12 col-md-5 col-lg-4 col-xxl-3 d-flex pub-inner">

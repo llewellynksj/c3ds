@@ -287,6 +287,12 @@ p {
     padding-top: 20px;
 }
 
+.pub-button {
+    max-width: 150px;
+}
+
+/* Publications Search */
+
 
 /* Footer */
 footer {

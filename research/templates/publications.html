@@ -8,28 +8,38 @@
 </div>
 
 <section class="container-fluid page-container">
-    {% for item in queryset %}
-        <div class="row py-3 d-flex pub-container">
-            <div class="col-12 col-sm-12 col-md-5 col-lg-4 col-xxl-3 d-flex pub-inner">
-                <a href="{{ item.url }}" target="_blank" rel="noopener" class="pub-img-container">
-                    <img src="{{ item.thumbnail.url }}" alt="" class="pub-img">
-                </a>
-            </div>
-            <div class="pb-3 col-12 col-sm-12 col-md-7 col-lg-8 col-xxl-9 pub-inner">
-                <h2 class="">{{ item.title }}</h2>
-                <p class="">Date: {{ item.date }}</p>
-                <p class="">Authors: {{ item.authors }}</p>
-                <p class="">Type: {{ item.type }}</p>
-                <p class="">Publication: {{ item.publication }}</p>
-                <p class="profile-text">{{ item.description | safe }}</p>
-                <a href="{{ item.url }}" target="_blank" rel="noopener" class="hover-link">
-                    <p class="profile-text">Read More</p>
-                </a>
-            </div>
-            <hr class="line-break">
-        </div>
-    {% endfor %}
     
+    {% for item in queryset %}
+    <div class="row py-3 d-flex pub-container">
+        <div class="col-12 col-sm-12 col-md-5 col-lg-4 col-xxl-3 d-flex pub-inner">
+            <a href="{{ item.url }}" target="_blank" rel="noopener" class="pub-img-container">
+                <img src="{{ item.thumbnail.url }}" alt="" class="pub-img">
+            </a>
+        </div>
+        <div class="pb-3 col-12 col-sm-12 col-md-7 col-lg-8 col-xxl-9 pub-inner">
+            <h4 class="">{{ item.title }}</h4>
+            <p class=""><em>Date:</em> {{ item.date }}</p>
+            <p class=""><em>Authors:</em> {{ item.authors }}</p>
+            <p class=""><em>Type:</em> {{ item.type }}</p>
+            <p class=""><em>Publication:</em> {{ item.publication }}</p>
+            
+            <div class="d-flex flex-column">
+                <button class="btn btn-outline-dark pub-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDescrip{{item.id}}" aria-expanded="false" aria-controls="collapseDescrip{{item.id}}">
+                    Read Summary
+                </button>
+                <div class="collapse" id="collapseDescrip{{item.id}}">
+                    <div class="card card-body">
+                    {{ item.description | safe }}
+                    </div>
+                </div>
+
+                <a href="{{ item.url }}" target="_blank" rel="noopener" class="mt-2 btn btn-outline-dark pub-button">Visit Publication</a>
+            </div>
+        </div>
+        <hr class="line-break">
+    </div>
+    {% endfor %}
+
 
 </section>
 

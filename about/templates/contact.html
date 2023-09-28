@@ -8,6 +8,16 @@
 </div>
 
 <section class="container-fluid">
+    <!-- Form -->
+    <div class="col-12 col-md-9 text-center">
+        <h3>Get in Touch</h3>
+        <form action="{% url 'contact' %}" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" class="btn btn-secondary" value="Send">
+        </form>
+    </div>
+
     <br>
     <h2 class="text-center">Full contact details will be coming soon</h2>
 

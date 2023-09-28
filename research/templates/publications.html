@@ -11,7 +11,7 @@
     
     {% for item in queryset %}
     <div class="row py-3 d-flex pub-container">
-        <div class="col-12 col-sm-12 col-md-5 col-lg-4 col-xxl-3 d-flex pub-inner">
+        <div class="col-12 col-sm-12 col-md-5 col-lg-4 col-xxl-3 d-flex pub-inner grow">
             <a href="{{ item.url }}" target="_blank" rel="noopener" class="pub-img-container">
                 <img src="{{ item.thumbnail.url }}" alt="" class="pub-img">
             </a>

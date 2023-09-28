@@ -276,11 +276,11 @@ p {
 }
 
 .pub-img {
-    width: 100%;
+    width: 90%;
     height: auto;
     border: 1px solid #ddd;
     border-radius: 4px;
-    padding: 5px;
+    /* padding: 5px; */
 }
 
 .pub-img-container {

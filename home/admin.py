@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Carousel, OverviewCard
+from .models import Carousel, NewsCard
 
 admin.site.register(Carousel)
-admin.site.register(OverviewCard)
+admin.site.register(NewsCard)

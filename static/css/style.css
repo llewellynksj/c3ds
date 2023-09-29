@@ -136,10 +136,6 @@ p {
 }
 
 /* News Cards */
-/* .card-container {
-    flex-direction: column;
-} */
-
 .card {
     width: 280px;
     height: 525px;
@@ -152,6 +148,7 @@ p {
     margin: 0;
 }
 
+/* Objectives */
 .graphic {
     width: 300px;
     height: auto;
@@ -364,7 +361,7 @@ footer {
 }
 
 @media (min-width: 1400px) {
-    /* .page-title {
-        font-size: 24px;
-    } */
+    .homepage-container {
+        max-width: 1100px;
+    }
 }

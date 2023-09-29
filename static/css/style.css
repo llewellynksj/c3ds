@@ -6,10 +6,8 @@ body {
     color: black;
 }
 
-nav {
-    max-width: 1500px;
-    margin: auto;
-    padding: 0;
+nav div {
+    padding: 0 8px;
 }
 
 .nav-link, .dropdown-item {
@@ -28,6 +26,7 @@ i {
 
 .navbar-brand {
     padding-left: 10px;
+    margin: 0;
 }
 
 .centre-logo {
@@ -74,6 +73,7 @@ p {
 .page-title {
     font-weight: 300;
     line-height: 150%;
+    margin: 0 5px 0 0;
 }
 
 .overflow {
@@ -329,6 +329,9 @@ footer {
     .profile-card {
         margin-right: 60px;
     }
+    .page-title {
+        align-self: flex-end;
+    }
 }
 
 @media (min-width: 768px) {
@@ -373,7 +376,7 @@ footer {
 }
 
 @media (min-width: 1400px) {
-    .page-title {
+    /* .page-title {
         font-size: 24px;
-    }
+    } */
 }

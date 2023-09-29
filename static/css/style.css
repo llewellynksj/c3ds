@@ -127,8 +127,8 @@ p {
     margin: auto;
 }
 
-.inner-section-container {
-    max-width: 1180px;
+.homepage-container {
+    max-width: 900px;
     margin: auto;
 }
 
@@ -136,28 +136,21 @@ p {
     font-weight: 350;
 }
 
-.card-container {
-    margin: auto;
-}
+/* News Cards */
+/* .card-container {
+    flex-direction: column;
+} */
 
-.card-heading {
-    text-align: left;
-    font-size: 1.2rem;
-    padding: 8px 0;
-}
-
-.card-inner {
-    max-width: 400px;
-    padding: 5px;
-    border-radius: 15px;
-    margin: auto;
+.card {
+    width: 280px;
+    height: 525px;
+    padding: 0;
 }
 
 .overview-img {
-    border-radius: 15px;
-    max-width: 300px;
+    max-width: 280px;
     max-height: auto;
-    margin: auto;
+    margin: 0;
 }
 
 .graphic {
@@ -184,7 +177,6 @@ p {
 
 /* Twitter feed */
 .twitter-container {
-    max-width: 300px;
     background-color: rgba(100, 138, 139, 0.7);
     border-radius: 10px;
     color: white;
@@ -194,7 +186,11 @@ p {
 .twitter-outer {
     position: relative;
     overflow: hidden;
-    width: 100%;
+    min-width: 300px;
+}
+
+.twitter-display {
+    display: none;
 }
 
 .twitter-inner {
@@ -219,7 +215,6 @@ p {
 /* People Page */
 .profile-section {
     max-width: 1500px;
-   
 }
 
 .profile-box {
@@ -319,7 +314,7 @@ footer {
 }
 
 /* Media queries */
-@media (min-width: 444px) {
+@media (min-width: 458px) {
     .hero-tagline {
         height: 75px;
     }
@@ -341,9 +336,9 @@ footer {
     .hero-tagline {
         font-size: 20px;
     }
-    .twitter-container {
-        display: block;
-    }
+    /* .card-container {
+        flex-direction: row;
+    } */
     .graphic {
         width: 400px;
     }
@@ -357,9 +352,6 @@ footer {
 } 
 
 @media (min-width: 992px) {
-    .card-body {
-        max-width: 500px;
-    }
     .hero-tagline {
         height: 60px;
         padding-top: 10px;

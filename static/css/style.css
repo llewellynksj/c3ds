@@ -18,6 +18,7 @@ body {
 
 nav {
     background-color: var(--main-bg-color);
+    padding-bottom: 0;
 }
 
 .navbar-toggler {
@@ -56,7 +57,7 @@ i {
 }
 
 .centre-logo {
-    width: 56vw;
+    width: 120px;
     height: auto;
 }
 
@@ -78,8 +79,16 @@ p {
     font-size: 16px;
 }
 
+.page-banner {
+    background-color: var(--main-bg-color);
+    margin: 0;
+    padding: 0;
+}
+
 .page-title {
-    font-size: 18px;
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
 }
 
 .page-container {
@@ -362,15 +371,9 @@ footer {
     .hero-tagline {
         height: 75px;
     }
-    .centre-logo {
-        width: 46vw;
-    }
 }
 
 @media (min-width: 576px) {
-    .centre-logo {
-        width: 39vw;
-    }
     .profile-card {
         margin-right: 60px;
     }
@@ -380,9 +383,6 @@ footer {
 }
 
 @media (min-width: 768px) {
-    .centre-logo {
-        width: 26vw;
-    }
     .line-break {
         max-width: 100%;
     }
@@ -404,7 +404,7 @@ footer {
 
 @media (min-width: 992px) {
     .centre-logo {
-        width: 21vw;
+        width: 150px;
     }
     .hero-tagline {
         padding-top: 10px;
@@ -415,18 +415,12 @@ footer {
 } 
 
 @media (min-width: 1200px) {
-    .centre-logo {
-        width: 16vw;
-    }
     .hero-tagline {
         font-size: 22px;
     }
 }
 
 @media (min-width: 1400px) {
-    .centre-logo {
-        width: 12vw;
-    }
     .homepage-container {
         max-width: 1100px;
     }

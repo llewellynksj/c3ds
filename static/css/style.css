@@ -123,14 +123,14 @@ p {
 }
 
 .banner {
-    background-color: var(--main-bg-color);
+    background-color: var(--secondary-color);
     width: 100%;
     height: 10vh;
 }
 
 .banner-title {
     padding-left: 10px;
-    color: #fff;
+    color: black;
 }
 
 .grow { 
@@ -171,7 +171,7 @@ p {
     width: 280px;
     height: 540px;
     padding: 0;
-    border: 1px solid var(--secondary-color);
+    border: 1px solid var(--main-bg-color);
     margin-left: 8px;
     margin-right: 8px;
 }

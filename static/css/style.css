@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
 
 /* Base styles */
+:root {
+    --main-bg-color: #003c3c;
+  }
+
+
 body {
     font-family: Roboto , sans-serif;
     color: black;
@@ -18,7 +23,7 @@ nav div {
 }
 
 i {
-    color: #648A8B;
+    color: var(--main-bg-color);
     font-size: 18px;
 }
 
@@ -33,7 +38,7 @@ i {
 }
 
 .centre-logo {
-    width: 120px;
+    width: 50vw;
     height: auto;
 }
 
@@ -100,13 +105,14 @@ p {
 }
 
 .banner {
-    background-color: #C7D6D6;
+    background-color: var(--main-bg-color);
     width: 100%;
     height: 10vh;
 }
 
 .banner-title {
     padding-left: 10px;
+    color: #fff;
 }
 
 .grow { 
@@ -119,7 +125,7 @@ p {
 
 /* Carousel styles */
 .hero-tagline {
-    background-color: #648A8B;
+    background-color: var(--main-bg-color);
     font-size: 18px;
     color: white;
     padding-top: 5px;
@@ -156,14 +162,14 @@ p {
     position: absolute;
     bottom: 15px;
     left: 15px;
-    background-color: #648A8B;
+    background-color: var(--main-bg-color);
     color: #fff;
     font-weight: lighter;
 }
 
 .news-btn:hover {
     background-color: #fff;
-    color: #648A8B;
+    color: var(--main-bg-color);
 }
 
 .overview-img {
@@ -259,7 +265,7 @@ p {
 .profile-card {
     max-width: 350px;
     min-height: 400px;
-    background-color: #C7D6D6;
+    border: 1px solid #00dca5;
     margin-bottom: 60px;
 }
 
@@ -276,10 +282,6 @@ p {
 
 .acc-box {
     margin-bottom: 85px;
-}
-
-.acc-card {
-    background-color: #DBE5E5;
 }
 
 /* Publications Page */
@@ -342,9 +344,15 @@ footer {
     .hero-tagline {
         height: 75px;
     }
+    .centre-logo {
+        width: 40vw;
+    }
 }
 
 @media (min-width: 576px) {
+    .centre-logo {
+        width: 30vw;
+    }
     .profile-card {
         margin-right: 60px;
     }
@@ -354,6 +362,9 @@ footer {
 }
 
 @media (min-width: 768px) {
+    .centre-logo {
+        width: 25vw;
+    }
     .line-break {
         max-width: 100%;
     }
@@ -383,6 +394,9 @@ footer {
 } 
 
 @media (min-width: 1200px) {
+    .centre-logo {
+        width: 15vw;
+    }
     .hero-tagline {
         font-size: 22px;
     }

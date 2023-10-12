@@ -1,11 +1,15 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render
+from .models import ContactDetail
 
 
 def display_contact(request):
     """
     Displays the contact page
     """
-    return render(request, 'contact.html', {})
+    details_list = ContactDetail.objects.all()
+
+    return render(
+        request, 'contact.html', {'details_list': details_list})
 
 
 def display_about(request):

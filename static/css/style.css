@@ -265,6 +265,25 @@ p {
     max-width: 1400px;
 }
 
+/* Contact Page */
+.contact-section {
+    max-width: 1200px;
+    margin: auto;
+    margin-bottom: 30px;
+    border-radius: 18px;
+}
+
+.location-section {
+    margin-bottom: 30px;
+}
+
+iframe {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 480px;
+}
+
 /* People Page */
 .profile-section {
     max-width: 1500px;
@@ -392,6 +411,9 @@ footer {
     }
     .graphic {
         width: 400px;
+    }
+    .contact-information {
+        padding-top: 30px;
     }
     .pub-container {
         padding-left: 50px;

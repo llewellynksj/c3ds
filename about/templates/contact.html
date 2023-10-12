@@ -8,6 +8,42 @@
 </div>
 
 <section class="container-fluid">
+    <div class="contact-section pt-4">
+        <div class="row location-section">
+
+            <!-- Address -->
+            <div class="col-12 col-md-3">
+                <div class="contact-information text-center">
+                    {% for item in details_list %}
+                        <h3>Address</h3>
+                        <p>
+                            {{ item.first_line_of_address }}
+                            <br>{{ item.second_line_address }}
+                            <br>{{ item.city }}
+                            <br>{{ item.county }}
+                            <br>{{ item.postcode }}
+                        </p>
+                        <h4>Email</h4>
+                        <a href="mailto:{{ item.email }}" class="hover-link"><p>{{ item.email }}</p></a>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- Page Divider -->
+            <!-- <div class="divider" id="form-divider"><div class="divider-inner"></div><span><i class="fa-thin fa-circle-heart"></i></span></div> -->
+
+            <!-- Map -->
+            <div class="col-12 col-md-9 text-center">
+                <!-- <h3>Find Us</h3> -->
+                <div class="d-flex align-items-center justify-content-start">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2525.3132952582!2d-3.5412630230903845!3d50.73267786700229!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486da4113c8130b1%3A0xb9019991fe3fbf9a!2sUniversity%20of%20Exeter%20Clayden%20Building!5e0!3m2!1sen!2suk!4v1697112027925!5m2!1sen!2suk"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- <section class="container-fluid">
     <br>
     <h2 class="text-center">Full contact details will be coming soon</h2>
 
@@ -17,5 +53,5 @@
     <h2 class="text-center"><strong>Contact</strong></h2>
     <p class="text-center">Prof. Coan at <a href="mailto:c3ds@exeter.ac.uk" class="link-colour">c3ds@exeter.ac.uk</a> for more information or to set up a meeting</p>
 
-</section>
+</section> -->
 {% endblock %}

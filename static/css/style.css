@@ -191,12 +191,13 @@ p {
     left: 15px;
     background-color: var(--main-bg-color);
     color: #fff;
-    font-weight: lighter;
+    /* font-weight: lighter; */
 }
 
 .news-btn:hover {
     background-color: #fff;
     color: var(--main-bg-color);
+    border: 1px solid var(--main-bg-color);
 }
 
 .overview-img {

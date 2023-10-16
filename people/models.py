@@ -1,5 +1,6 @@
 from django.db import models
 from cloudinary.models import CloudinaryField
+from ckeditor.fields import RichTextField
 from django.utils import timezone
 import datetime
 from datetime import datetime
@@ -25,7 +26,9 @@ class Profile(models.Model):
         default='Centre Director')
     job_title = models.CharField(
         max_length=500)
-    summary = models.TextField(
+    summary = RichTextField(
+        blank=True,
+        null=True,
         max_length=10000)
     expertise = models.CharField(
         max_length=500,

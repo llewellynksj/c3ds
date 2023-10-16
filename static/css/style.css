@@ -323,8 +323,9 @@ iframe {
     left: 25px;
 }
 
-.acc-box {
-    margin-bottom: 85px;
+.summary-text {
+    font-family: Outfit, sans-serif;
+    font-size: 18px;
 }
 
 /* Publications Page */

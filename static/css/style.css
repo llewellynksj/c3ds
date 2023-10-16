@@ -178,7 +178,7 @@ p {
 /* News Cards */
 .news-card {
     width: 280px;
-    height: 540px;
+    height: 550px;
     padding: 0;
     border: 1px solid var(--main-bg-color);
     margin-left: 8px;
@@ -191,7 +191,6 @@ p {
     left: 15px;
     background-color: var(--main-bg-color);
     color: #fff;
-    /* font-weight: lighter; */
 }
 
 .news-btn:hover {
@@ -207,7 +206,7 @@ p {
 }
 
 /* Objectives */
-.graphic {
+/* .graphic {
     width: 300px;
     height: auto;
 }
@@ -227,7 +226,7 @@ p {
 
 .section-title {
     max-width: 900px;
-}
+} */
 
 /* Twitter feed */
 .twitter-container {
@@ -264,9 +263,9 @@ p {
 
 /* Contact Page */
 .contact-section {
-    max-width: 1200px;
+    /* max-width: 1200px; */
     margin: auto;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     border-radius: 18px;
 }
 
@@ -361,7 +360,6 @@ iframe {
 /* Footer */
 footer {
     background-color: #fff;
-    /* position: absolute; */
     right: 0;
     left: 0;
     bottom: 0;

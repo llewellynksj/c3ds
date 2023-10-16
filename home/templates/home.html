@@ -45,13 +45,35 @@
                 </div>
             </div>
 
+            <!-- Latest News -->
             <div class="row body-content">
                 <div class="homepage-container">
                     <h1>Latest News</h1>
                     <a href="#" class="hover-link">Read more...</a>
                 </div>
                 <div class="container-fluid d-flex justify-content-center row row-cols-2 row-cols-sm-2 row-cols-md-3">
-                    {% for item in news_card_objects|slice:"0:3" %}
+                    {% for item in latest_news_card_objects|slice:"0:3" %}
+                        <div class="card news-card my-3">
+                            <img class="card-img-top overview-img" src="{{ item.card_image.url }}" alt="Card image cap">
+                            <div class="card-body">
+                            <h5 class="card-title">{{ item.title }}</h5>
+                            <p><em>{{ item.date }}</em></p>
+                            <p class="card-text pb-2">{{ item.summary }}</p>
+                            <a href="{{ item.url }}" class="btn news-btn">Read Now</a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- Latest Research -->
+            <div class="row body-content mt-4 pt-4">
+                <div class="homepage-container">
+                    <h1>Latest Research</h1>
+                    <a href="#" class="hover-link">Read more...</a>
+                </div>
+                <div class="container-fluid d-flex justify-content-center row row-cols-2 row-cols-sm-2 row-cols-md-3">
+                    {% for item in latest_research_card_objects|slice:"0:3" %}
                         <div class="card news-card my-3">
                             <img class="card-img-top overview-img" src="{{ item.card_image.url }}" alt="Card image cap">
                             <div class="card-body">
@@ -87,7 +109,7 @@
     </section>
 
     <!-- Objectives -->
-    <section class="overflow mt-2 section-bkgrd justify-content-center">
+    <!-- <section class="overflow mt-2 section-bkgrd justify-content-center">
         <h1 class="my-4 text-center section-header pt-4"><strong>Our Objectives</strong></h1>
         <div class="row objective-container justify-content-center">
             <div class="col-md-7 col-sm-12 d-flex justify-content-center">
@@ -112,13 +134,13 @@
             </div>
         </div>
         <br><br>
-    </section>
+    </section> -->
 
 
     <!-- Contact -->
-    <section class="contact-section">
+    <section class="contact-section section-bkgrd py-4">
         <div class="container-fluid body-content">
-            <div class="text-left py-3">
+            <div class="text-left py-4">
                 <h1 class="my-3"><strong>Working with C3DS</strong></h1>
                 <p>If you are an organisation that could benefit from applying data science and/or social science
                     methods to measure, monitor, and evaluate the impact of your strategic communication, please get in

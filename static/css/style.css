@@ -119,13 +119,6 @@ p {
     overflow: hidden;
 }
 
-.section-bkgrd {
-    background: url('https://res.cloudinary.com/ddqyimddv/image/upload/e_gradient_fade:44,o_12/v1694782263/background_jsnuik.jpg');
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: cover;
-}
-
 .line-break {
     max-width: 1000px;
     margin: auto;
@@ -205,28 +198,6 @@ p {
     margin: 0;
 }
 
-/* Objectives */
-/* .graphic {
-    width: 300px;
-    height: auto;
-}
-
-.objective-container {
-    max-width: 1200px;
-    margin: auto;
-}
-
-.objective-inner {
-    width: 400px;
-}
-
-.objective-inner {
-    width: 400px;
-}
-
-.section-title {
-    max-width: 900px;
-} */
 
 /* Twitter feed */
 .twitter-container {
@@ -257,13 +228,19 @@ p {
 }
 
 /* Contact section on homepage */
+.section-bkgrd {
+    background: url('https://res.cloudinary.com/ddqyimddv/image/upload/e_gradient_fade:44,o_12/v1694782263/background_jsnuik.jpg');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: cover;
+}
 
 /* About Page */
 
 
 /* Contact Page */
 .contact-section {
-    /* max-width: 1200px; */
+    max-width: 1200px;
     margin: auto;
     margin-bottom: 20px;
     border-radius: 18px;

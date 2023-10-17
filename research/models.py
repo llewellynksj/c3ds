@@ -1,5 +1,6 @@
 from django.db import models
 from cloudinary.models import CloudinaryField
+from tinymce.models import HTMLField
 from ckeditor.fields import RichTextField
 
 
@@ -13,10 +14,9 @@ class Publication(models.Model):
     type = models.CharField(max_length=255)
     publication = models.CharField(max_length=255)
     authors = models.TextField(max_length=2000)
-    description = RichTextField(
+    description = HTMLField(
         blank=True,
-        null=True,
-    )
+        null=True,)
     url = models.URLField()
 
     class Meta:

@@ -15,7 +15,7 @@ class Publication(models.Model):
     description = models.TextField(
         blank=True,
         null=True,
-        max_length=2000)
+        max_length=5000)
     url = models.URLField()
 
     class Meta:

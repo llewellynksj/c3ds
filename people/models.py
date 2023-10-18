@@ -28,7 +28,7 @@ class Profile(models.Model):
     summary = models.TextField(
         blank=True,
         null=True,
-        max_length=2000)
+        max_length=5000)
     expertise = models.CharField(
         max_length=500,
         blank=True,

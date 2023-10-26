@@ -18,7 +18,10 @@ class Carousel(models.Model):
 
 
 class LatestNewsCard(models.Model):
-    card_image = CloudinaryField('image', default='card_placeholder')
+    card_image = CloudinaryField(
+        'image',
+        default='card_placeholder',
+        help_text='Please upload image with width 315px x height 200px')
     title = models.CharField(max_length=100, unique=True)
     date = models.DateField(null=True, blank=True)
     summary = models.TextField(blank=True, max_length=500)

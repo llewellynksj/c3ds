@@ -170,7 +170,7 @@ p {
 /* News Cards */
 .news-card {
     width: 280px;
-    height: 550px;
+    height: 775px;
     padding: 0;
     border: 1px solid var(--main-bg-color);
     margin-left: 8px;
@@ -365,6 +365,10 @@ footer {
 }
 
 @media (min-width: 576px) {
+    .news-card {
+        width: 315px;
+        height: 735px;
+    }
     .profile-card {
         margin-right: 60px;
     }

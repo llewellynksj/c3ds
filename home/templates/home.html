@@ -53,12 +53,12 @@
                 <div class="container-fluid d-flex justify-content-center row row-cols-2 row-cols-sm-2 row-cols-md-3">
                     {% for item in latest_news_card_objects|slice:"0:3" %}
                         <div class="card news-card my-3">
-                            <img class="card-img-top overview-img" src="{{ item.card_image.url }}" alt="Card image cap">
+                            <img class="card-img-top" src="{{ item.card_image.url }}" alt="Card image cap">
                             <div class="card-body">
                             <h5 class="card-title">{{ item.title }}</h5>
-                            <p><em>{{ item.date }}</em></p>
+                            <p><em><small>Created on {{ item.date }}</small></em></p>
                             <p class="card-text pb-2">{{ item.summary }}</p>
-                            <a href="{{ item.url }}" class="btn news-btn">Read Now</a>
+                            <a href="{{ item.url }}" target="_blank" rel="noopener" class="btn news-btn">Read More</a>
                             </div>
                         </div>
                     {% endfor %}
@@ -79,7 +79,7 @@
                             <h5 class="card-title">{{ item.title }}</h5>
                             <p><em>{{ item.date }}</em></p>
                             <p class="card-text pb-2">{{ item.summary }}</p>
-                            <a href="{{ item.url }}" class="btn news-btn">Read Now</a>
+                            <a href="{{ item.url }}" target="_blank" rel="noopener" class="btn news-btn">Read More</a>
                             </div>
                         </div>
                     {% endfor %}

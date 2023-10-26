@@ -1,4 +1,5 @@
 from django.db import models
+# from django.core.exceptions import ValidationError
 from cloudinary.models import CloudinaryField
 
 
@@ -18,9 +19,9 @@ class Carousel(models.Model):
 
 class LatestNewsCard(models.Model):
     card_image = CloudinaryField('image', default='card_placeholder')
-    title = models.CharField(max_length=30, unique=True)
+    title = models.CharField(max_length=100, unique=True)
     date = models.DateField(null=True, blank=True)
-    summary = models.TextField(blank=True, max_length=250)
+    summary = models.TextField(blank=True, max_length=500)
     url = models.URLField(null=True, blank=True)
 
     class Meta:
@@ -32,9 +33,9 @@ class LatestNewsCard(models.Model):
 
 class LatestResearchCard(models.Model):
     card_image = CloudinaryField('image', default='card_placeholder')
-    title = models.CharField(max_length=30, unique=True)
+    title = models.CharField(max_length=100, unique=True)
     date = models.DateField(null=True, blank=True)
-    summary = models.TextField(blank=True, max_length=250)
+    summary = models.TextField(blank=True, max_length=500)
     url = models.URLField(null=True, blank=True)
 
     class Meta:

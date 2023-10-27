@@ -300,11 +300,6 @@ iframe {
     left: 25px;
 }
 
-/* .summary-text {
-    font-family: Outfit, sans-serif;
-    font-size: 18px;
-} */
-
 /* Publications Page */
 .pub-container {
     max-width: 1200px;
@@ -333,6 +328,33 @@ iframe {
 }
 
 /* Publications Search */
+
+
+/* News Page */
+.news-container {
+    max-width: 1200px;
+}
+
+.news-inner {
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.news-img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.news-img-container {
+    padding-top: 10px;
+}
+
+.news-button {
+    max-width: 150px;
+}
 
 
 /* Footer */

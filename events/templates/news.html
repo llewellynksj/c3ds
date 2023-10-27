@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="banner">
+    <div class="page-container d-flex align-items-center">
+        <h1 class="m-3 pt-2 text-left banner-title"><strong>News</strong></h1>
+    </div>
+</div>
+
+<section class="container-fluid page-container">
+
+    {% for item in news_card_objects %}
+    <div class="row py-4 d-flex news-container">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-5 col-xxl-4 d-flex news-inner grow">
+            <a href="{{ item.url }}" target="_blank" rel="noopener" class="news-img-container">
+                <img src="{{ item.card_image.url }}" alt="Story image" class="news-img">
+            </a>
+        </div>
+        <div class="pb-3 col-12 col-sm-12 col-md-6 col-lg-7 col-xxl-8 news-inner">
+            <h4 class="">{{ item.title }}</h4>
+            <p class=""><em>Created on:</em> {{ item.date }}</p>
+            <p>{{ item.short_summary }}</p>
+            
+            <div class="d-flex flex-column">
+                <button class="btn btn-outline-dark news-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDescrip{{item.id}}" aria-expanded="false" aria-controls="collapseDescrip{{item.id}}">
+                    Expand
+                </button>
+                <div class="collapse" id="collapseDescrip{{item.id}}">
+                    <div class="card card-body">
+                    <p class="summary-text">{{ item.long_summary | safe }}</p>
+                    </div>
+                </div>
+
+                <a href="{{ item.url }}" target="_blank" rel="noopener" class="my-2 btn btn-outline-dark news-button">Read More</a>
+            </div>
+        </div>
+        <hr class="line-break">
+    </div>
+
+    {% endfor %}
+</section>
+{% endblock %}

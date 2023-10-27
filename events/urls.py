@@ -6,4 +6,8 @@ urlpatterns = [
         '',
         views.display_events,
         name='events'),
+    path(
+        'news',
+        views.display_news,
+        name='news'),
 ]

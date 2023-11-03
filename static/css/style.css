@@ -285,7 +285,7 @@ iframe {
 .profile-card {
     max-width: 350px;
     min-height: 400px;
-    border: 1px solid #00dca5;
+    border: 1px solid var(--secondary-color);
     margin-bottom: 60px;
 }
 

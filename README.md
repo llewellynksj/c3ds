@@ -301,7 +301,7 @@ Models:
 
 Homepage
 Scrolling hero image
-[![Image from Gyazo](https://i.gyazo.com/858d147735bb60ad15a8ddd00b77b85a.gif)](https://gyazo.com/858d147735bb60ad15a8ddd00b77b85a)
+![Image from Gyazo](https://i.gyazo.com/858d147735bb60ad15a8ddd00b77b85a.gif)](https://gyazo.com/858d147735bb60ad15a8ddd00b77b85a)
 
 <br>
 

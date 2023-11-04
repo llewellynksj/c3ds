@@ -57,9 +57,6 @@ Summary of site
 - [Validator Testing](#validator-testing)
 - [Bugs](#bugs)
 
-### [Bugaboo](#bugaboo)
-<!-- - [Resources](#resources) -->
-
 <br>
 
 ----
@@ -685,7 +682,3 @@ CSS
   |  |  |  |
 
 <br>
-
-----
-
-## Bugaboo

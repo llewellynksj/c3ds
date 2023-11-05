@@ -54,8 +54,6 @@ Summary of site
 - [Function Testing](#function-testing)
 - [User Story Testing](#user-story-testing)
 - [Lighthouse](#lighthouse)
-- [Validator Testing](#validator-testing)
-- [Bugs](#bugs)
 
 <br>
 

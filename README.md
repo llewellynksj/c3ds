@@ -191,21 +191,20 @@ Typography was also chosen to be in keeping with the brand identity of the Unive
 Careful consideration was taken in the planning stages of this project. Initial user journeys were mapped out for both the admin and general user. From these an ER Diagram was created.
 
 ### **User Journey**
-![Image of user journey map](readme_assets/lwd_user_journey.webp)
+
 
 <br>
 
-![Image of admin journey map](readme_assets/lwd_admin_journey.webp)
+
 
 <br> 
 
-### **Epics**
-![Image of epics chart](readme_assets/lwd_epics.webp)
+
 
 <br>
 
 ### **Database**
-![Image of entity relationship diagram](readme_assets/lwd_erd.webp)
+
 
 <br>
 
@@ -213,84 +212,63 @@ Careful consideration was taken in the planning stages of this project. Initial 
 
 ## Project Structure
 ### **Apps:**
-Little White Dress has a total of 5 Apps. These are:
-* Home
-* About
-* People
-* Research
-* Resources
-* Events
+C3DS has a total of ... Apps. These are:
+* 
+
 
 These are outlined with their corresponding models below.
 
 #### HOME
 
-  * Holds the database for any products displayed on the website
-  * Displays the homepage and various product views
-  * Adds liked products to customer record
+  
 
 Models:
 
-![Product Model]()
-
-![Category Model]()
 <br>
 
 #### ABOUT
 
-  * Holds the database for all customer profiles
-  * Displays the customer profile pages and all update pages related to the user
-  * Holds the templates for all customer and user related pages including registration
+ 
 
 Models:
 
-![Customer Model]()
+
 
 <br>
 
 #### PEOPLE
 
-  * Holds the database for the store's contact details and for any enquiries made via the contact form
-  * Displays the contact page
+
 
 Models:
 
-![Contact Detail Model]()
-
-![Enquiry Model]()
 
 <br>
 
 #### RESEARCH
 
-  * Holds the database for all recommendations made in the brides community section of the website
-  * Displays all recommendations including specific recommendations to logged in users
 
 Models:
 
-![Recommendation Model]()
+
 
 <br>
 
 #### RESOURCES
 
-  * Holds the database for all appointments that are made
-  * Displays the appointment booking and confirmation pages
+
 
 Models:
 
-![Appointment Model]()
+
 
 <br>
 
 #### EVENTS
 
-  * Holds the database for all appointments that are made
-  * Displays the appointment booking and confirmation pages
   
 Models:
 
-![Appointment Model]()
 
 ---
 
